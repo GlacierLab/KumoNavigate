@@ -52,7 +52,7 @@
 
 ***
 
-#### <img src="https://qinlili.bid/favicon.ico" height="20">[@琴梨梨](https://qinlili.bid){:target="_blank"}  
+#### <img src="https://qinlili.bid/favicon.ico" height="20">[@琴梨梨](https://qinlili.bid){:target="_blank"} | [提建议](https://github.com/GlacierLab/KumoNavigate/issues/new){:target="_blank"}
 
 ###### 本网站使用`Google Analytics`分析用户流量，该过程是完全匿名的，数据用于调整页面内的链接布局  
 
