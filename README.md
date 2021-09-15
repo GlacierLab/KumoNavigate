@@ -1,6 +1,6 @@
 # 云酱游戏导航
 ###### 坚决只收录官方网址，放心省心
-##### 请善用`Ctrl`+`F`查找，如见到此图标<img src="res/info.svg" height="15" title="我是一个提示">可把鼠标悬停查看提示
+##### 请善用`Ctrl`+`F`查找，如见到此图标<img src="res/info.svg" height="15" title="我是一个提示">可把鼠标悬停查看提示，移动端长按此图标也可查看
 
 
 ## 游戏平台
@@ -10,7 +10,7 @@
 
 ## 游戏官方网站
 `提供官方正版游戏下载但不提供管理软件的网站，为节约空间已合并同一公司出品的游戏`  
-#### <img src="https://itch.io/favicon.ico" height="20">[itch.io](https://itch.io/) | <img src="https://nie.res.netease.com/nie/gw/15v1/img/logo1_d853983.png" height="20">[网易游戏](https://game.163.com/)<img src="res/info.svg" height="15" title="页面右上角有游戏列表，巧用Ctrl+F快速查找"> | <img src="https://game.qq.com/favicon.ico" height="20">[腾讯游戏](https://game.qq.com/web201910/introduce.html)<img src="res/info.svg" height="15" title="大部分腾讯游戏独立下载都会捆绑WeGame，建议直接下载WeGame"> | <img src="https://games.wanmei.com/favicon.ico" height="20">[完美世界游戏](https://games.wanmei.com/)<img src="res/info.svg" height="15" title="点击顶栏游戏展开全部游戏列表，完美电竞平台也从这里下载，CSGO和DOTA2国服请去蒸汽平台下载">  
+#### <img src="https://itch.io/favicon.ico" height="20">[itch.io](https://itch.io/) | <img src="https://dingyue.ws.126.net/2020/0612/84eaeb19p00qbt1jk000vc0008g008gm.png" height="20">[网易游戏](https://game.163.com/)<img src="res/info.svg" height="15" title="页面右上角有游戏列表，巧用Ctrl+F快速查找"> | <img src="https://game.qq.com/favicon.ico" height="20">[腾讯游戏](https://game.qq.com/web201910/introduce.html)<img src="res/info.svg" height="15" title="大部分腾讯游戏独立下载都会捆绑WeGame，建议直接下载WeGame"> | <img src="https://games.wanmei.com/favicon.ico" height="20">[完美世界游戏](https://games.wanmei.com/)<img src="res/info.svg" height="15" title="点击顶栏游戏展开全部游戏列表，完美电竞平台也从这里下载，CSGO和DOTA2国服请去蒸汽平台下载">  
 
 
 ## CDKEY销售网站
