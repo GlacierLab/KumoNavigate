@@ -23,6 +23,16 @@
 #### <img src="https://steamdb.info/favicon.ico" height="20">[SteamDB](https://steamdb.info/)<img src="res/info.svg" height="15" title="提供Steam平台的各类游戏数据"> | <img src="https://www.gamerpower.com/favicon/apple-touch-icon.png" height="20">[GamerPower](https://www.gamerpower.com/)<img src="res/info.svg" height="15" title="提供游戏限免资讯"> | <img src="https://static.pcgamingwiki.com/favicons/pcgamingwiki.png" height="20">[PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home)<img src="res/info.svg" height="15" title="提供游戏运行疑难解答，包括优化技巧">  
 
 
+## 模拟技术软件
+`在PC上运行其他设备游戏所使用的软件，括号内为可模拟的设备类型，本导航不包括游戏资源，请自行通过合法途径下载游戏资源`
+#### <img src="https://rpcs3.net/img/meta/favicon/196.png" height="20">[RPCS3(PS3)](https://rpcs3.net/) | 
+
+
+
+## 游戏开发
+`游戏开发者需要用到的各类网站`
+### 游戏引擎
+
 
 
 
