@@ -34,8 +34,12 @@
 #### <img src="https://store.unity.com/themes/store/build/images/ui/unity-logo-black.svg" height="20">[Unity](https://unity.com/){:target="_blank"}<img src="res/info.svg" height="15" title="请不要使用中国大陆IP访问以免下到广告特供版"> | <img src="https://docs.unrealengine.com/4.27/Include/Images/site_icon.png" height="20">[Unreal Engine](https://www.unrealengine.com/){:target="_blank"} | <img src="https://www.cryengine.com/favicon.ico" height="20">[CryEngine](https://www.cryengine.com/){:target="_blank"} | <img src="https://www.cocos.com/wp-content/themes/cocos_en/image/apple-touch-icon.png" height="20">[Cocos Engine](https://www.cocos.com/){:target="_blank"} | <img src="https://construct-static.com/images/v931/r/global/construct-3-logo_v43.png" height="20">[Construct](https://www.construct.net/){:target="_blank"}  
 
 
-## 游戏工具
+## 游戏工具<img src="res/info.svg" height="15" title="你还可以去PCGamingWiki寻找更多实用的工具">
+`用于改善游戏体验的小软件`
+### 优化工具
+#### <img src="https://github.com/qinlili23333.png?s=80" height="20">[GlacierLab](https://glacier.qinlili.bid){:target="_blank"}<img src="res/info.svg" height="15" title="由琴梨梨建立的专注游戏优化的组织，坚持绝对开源"> | <img src="https://ragnotechpowered.com/assets/img/apple-touch-icon.png" height="20">[Low Specs Experience](https://ragnotechpowered.com/){:target="_blank"}  
 
-
+### 图形API转换
+#### [dxvk(DX9-11转VK)](https://github.com/doitsujin/dxvk){:target="_blank"} | <img src="http://dege.freeweb.hu/dgVoodoo2/dgVoodoo2.png" height="20">[dgVoodoo2(Glide/DX1-9转DX11/12)](http://dege.freeweb.hu/dgVoodoo2/){:target="_blank"} | [vkd3d(DX12转VK)](https://github.com/HansKristian-Work/vkd3d-proton){:target="_blank"} | [WineD3D(DX1-11转OGL/VK)](https://fdossena.com/?p=wined3d/index.frag){:target="_blank"} | [d912pxy(DX9转DX12)](https://github.com/megai2/d912pxy){:target="_blank"} | [mesa-dist(OGL转D3D/VK/软渲染)](https://github.com/pal1000/mesa-dist-win/){:target="_blank"}  
 
 
