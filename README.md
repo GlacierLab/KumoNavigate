@@ -25,7 +25,7 @@
 
 ## 模拟技术软件
 `在PC上运行其他设备游戏所使用的软件，括号内为可模拟的设备类型，本导航不包括游戏资源，请自行通过合法途径下载游戏资源`
-#### <img src="https://rpcs3.net/img/meta/favicon/196.png" height="20">[RPCS3(PS3)](https://rpcs3.net/) | <img src="https://vita3k.org/favicon.ico" height="20">[Vita3K(PSV)](https://vita3k.org/) | <img src="https://yuzu-emu.org/favicon.ico" height="20">[yuzu(NS)](https://yuzu-emu.org/) | <img src="https://pcsx4.com/favicon/apple-touch-icon.png" height="20">[PCSX4(PS4)](https://pcsx4.com/){:target="_blank" rel="noopener"}  
+#### <img src="https://rpcs3.net/img/meta/favicon/196.png" height="20">[RPCS3(PS3)](https://rpcs3.net/) | <img src="https://vita3k.org/favicon.ico" height="20">[Vita3K(PSV)](https://vita3k.org/) | <img src="https://yuzu-emu.org/favicon.ico" height="20">[yuzu(NS)](https://yuzu-emu.org/) | <img src="https://github.com/ps4emurepo.png?s=20" height="20">[PCSX4(PS4)](https://pcsx4.com/){:target="_blank" rel="noopener"}  
 
 
 
