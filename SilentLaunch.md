@@ -7,4 +7,4 @@
 <a href="steam://silent -silent">Steam</a>  
 <a href="com.epicgames.launcher://launch?silent=true">Epic</a>  
 <a href="origin://launch -AutoStart">Origin</a>  
-<a href="uplay://launch -uplay_silent">UbiConnect</a>  
+<a href="uplay://launch -uplay_silent">UbiConnect(暂不可用)</a>  
