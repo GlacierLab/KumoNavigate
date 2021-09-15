@@ -25,13 +25,14 @@
 
 ## 模拟技术软件
 `在PC上运行其他设备游戏所使用的软件，括号内为可模拟的设备类型，本导航不包括游戏资源，请自行通过合法途径下载游戏资源`
-#### <img src="https://rpcs3.net/img/meta/favicon/196.png" height="20">[RPCS3(PS3)](https://rpcs3.net/) | 
+#### <img src="https://rpcs3.net/img/meta/favicon/196.png" height="20">[RPCS3(PS3)](https://rpcs3.net/) | <img src="https://vita3k.org/favicon.ico" height="20">[Vita3K(PSV)](https://vita3k.org/) | <img src="https://yuzu-emu.org/favicon.ico" height="20">[yuzu(NS)](https://yuzu-emu.org/) | <img src="https://pcsx4.com/favicon/apple-touch-icon.png" height="20">[PCSX4(PS4)](https://pcsx4.com/)
 
 
 
 ## 游戏开发
 `游戏开发者需要用到的各类网站`
 ### 游戏引擎
+#### <img src="https://store.unity.com/themes/store/build/images/ui/unity-logo-black.svg" height="20">[Unity](https://unity.com/)<img src="res/info.svg" height="15" title="请不要使用中国大陆IP访问以免下到广告特供版"> | <img src="https://docs.unrealengine.com/4.27/Include/Images/site_icon.png" height="20">[Unreal Engine](https://www.unrealengine.com/) | <img src="https://www.cryengine.com/favicon.ico" height="20">[CryEngine](https://www.cryengine.com/) | <img src="https://www.cocos.com/wp-content/themes/cocos_en/image/apple-touch-icon.png" height="20">[Cocos Engine](https://www.cocos.com/) | <img src="https://construct-static.com/images/v931/r/global/construct-3-logo_v43.png" height="20">[Construct](https://www.construct.net/)
 
 
 
