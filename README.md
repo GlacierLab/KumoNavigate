@@ -40,6 +40,6 @@
 #### <img src="https://github.com/qinlili23333.png?s=80" height="20">[GlacierLab](https://glacier.qinlili.bid){:target="_blank"}<img src="res/info.svg" height="15" title="由琴梨梨建立的专注游戏优化的组织，坚持绝对开源"> | <img src="https://ragnotechpowered.com/assets/img/apple-touch-icon.png" height="20">[Low Specs Experience](https://ragnotechpowered.com/){:target="_blank"}  
 
 ### 图形API转换
-#### [dxvk(DX9-11转VK)](https://github.com/doitsujin/dxvk){:target="_blank"} | <img src="http://dege.freeweb.hu/dgVoodoo2/dgVoodoo2.png" height="20">[dgVoodoo2(Glide/DX1-9转DX11/12)](http://dege.freeweb.hu/dgVoodoo2/){:target="_blank"} | [vkd3d(DX12转VK)](https://github.com/HansKristian-Work/vkd3d-proton){:target="_blank"} | [WineD3D(DX1-11转OGL/VK)](https://fdossena.com/?p=wined3d/index.frag){:target="_blank"} | [d912pxy(DX9转DX12)](https://github.com/megai2/d912pxy){:target="_blank"} | [mesa-dist(OGL转D3D/VK/软渲染)](https://github.com/pal1000/mesa-dist-win/){:target="_blank"}  
+#### [dxvk(DX9-11转VK)](https://github.com/doitsujin/dxvk){:target="_blank"} | [dgVoodoo2(Glide/DX1-9转DX11/12)](http://dege.freeweb.hu/dgVoodoo2/){:target="_blank"} | [vkd3d(DX12转VK)](https://github.com/HansKristian-Work/vkd3d-proton){:target="_blank"} | [WineD3D(DX1-11转OGL/VK)](https://fdossena.com/?p=wined3d/index.frag){:target="_blank"} | [d912pxy(DX9转DX12)](https://github.com/megai2/d912pxy){:target="_blank"} | [mesa-dist(OGL转D3D/VK/软渲染)](https://github.com/pal1000/mesa-dist-win/){:target="_blank"}  
 
 
