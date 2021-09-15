@@ -15,7 +15,7 @@
 
 ## CDKEY销售网站
 `销售可在游戏平台激活的CDKEY的网站`
-#### <img src="https://humblebundle-a.akamaihd.net/static/hashed/46cf2ed85a0641bfdc052121786440c70da77d75.png" height="20">[HumbleBundle](https://www.humblebundle.com/){:target="_blank"}<img src="res/info.svg" height="15" title="该网站同时也独立提供正版游戏的下载"> | <img src="https://plati.ru/favicon.ico" height="20">[Plati](https://plati.ru/){:target="_blank"}<img src="res/info.svg" height="15" title="支持支付宝。该网站也提供游戏账号交易，请认真辨别是CDKEY还是账号！"> | <img src="https://www.g2a.com/static/assets/apple-touch-icon.png" height="20">[G2A](https://www.g2a.com/){:target="_blank"}  
+#### <img src="https://humblebundle-a.akamaihd.net/static/hashed/46cf2ed85a0641bfdc052121786440c70da77d75.png" height="20">[HumbleBundle](https://www.humblebundle.com/){:target="_blank"}<img src="res/info.svg" height="15" title="该网站同时也独立提供正版游戏的下载"> | <img src="https://plati.ru/favicon.ico" height="20">[Plati](https://plati.ru/){:target="_blank"}<img src="res/info.svg" height="15" title="支持支付宝。该网站也提供游戏账号交易，请认真辨别是CDKEY还是账号！"> | <img src="https://www.g2a.com/static/assets/apple-touch-icon.png" height="20">[G2A](https://www.g2a.com/){:target="_blank"} | <img src="https://cdn.fanatical.com/production/icons/android-chrome-192x192.png" height="20">[Fanatical](https://www.fanatical.com/){:target="_blank"}  
 
 
 ## 游戏数据信息网站
