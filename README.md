@@ -22,6 +22,9 @@
 `收集游戏各类信息供公开查阅的网站`
 #### <img src="https://steamdb.info/favicon.ico" height="20">[SteamDB](https://steamdb.info/){:target="_blank"}<img src="res/info.svg" height="15" title="提供Steam平台的各类游戏数据"> | <img src="https://www.gamerpower.com/favicon/apple-touch-icon.png" height="20">[GamerPower](https://www.gamerpower.com/){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏限免资讯"> | <img src="https://static.pcgamingwiki.com/favicons/pcgamingwiki.png" height="20">[PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏运行疑难解答，包括优化技巧">  
 
+### 游戏评测与资讯网站
+#### <img src="https://www.metacritic.com/MC_favicon.png" height="20">[metacritic](https://www.metacritic.com/game){:target="_blank"} | <img src="https://kraken.ignimgs.com/favicon.ico" height="20">[IGN](https://www.ign.com/){:target="_blank"}  
+
 
 ## 模拟技术软件
 `在PC上运行其他设备游戏所使用的软件，括号内为可模拟的设备类型，本导航不包括游戏资源，请自行通过合法途径下载游戏资源`
