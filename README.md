@@ -40,13 +40,17 @@
 ## 游戏工具<img src="res/info.svg" height="15" title="你还可以去PCGamingWiki寻找更多实用的工具">
 `用于改善游戏体验的小软件`
 ### 优化工具
-#### <img src="https://github.com/qinlili23333.png?s=80" height="20">[GlacierLab](https://glacier.qinlili.bid){:target="_blank"}<img src="res/info.svg" height="15" title="由琴梨梨建立的专注游戏优化的组织，坚持绝对开源"> | <img src="https://ragnotechpowered.com/assets/img/apple-touch-icon.png" height="20">[Low Specs Experience](https://ragnotechpowered.com/){:target="_blank"}  
+#### <img src="https://github.com/qinlili23333.png?s=80" height="20">[GlacierLab](https://glacier.qinlili.bid){:target="_blank"}<img src="res/info.svg" height="15" title="由琴梨梨建立的专注游戏优化的组织，坚持绝对开源"> | <img src="https://ragnotechpowered.com/assets/img/apple-touch-icon.png" height="20">[Low Specs Experience](https://ragnotechpowered.com/){:target="_blank"} | <img src="https://discourse.differentk.fyi/uploads/default/optimized/1X/7e6895cbab12ff2ad7b446f1af5267deea981861_2_32x32.png" height="20">[Special K](https://discourse.differentk.fyi/){:target="_blank"}<img src="res/info.svg" height="15" title="该工具需要注入游戏，无法用于在线游戏"> | [DX Compiler(LLVM)](https://github.com/microsoft/DirectXShaderCompiler)<img src="res/info.svg" height="15" title="32位版本请去琴梨梨Fork的仓库找，该工具使用有难度，已知和CEF与RTSS有兼容问题"> 
 
 ### 图形API转换
 #### [dxvk(DX9-11转VK)](https://github.com/doitsujin/dxvk){:target="_blank"} | [dgVoodoo2(Glide/DX1-9转DX11/12)](http://dege.freeweb.hu/dgVoodoo2/){:target="_blank"} | [vkd3d(DX12转VK)](https://github.com/HansKristian-Work/vkd3d-proton){:target="_blank"} | [WineD3D(DX1-11转OGL/VK)](https://fdossena.com/?p=wined3d/index.frag){:target="_blank"} | [d912pxy(DX9转DX12)](https://github.com/megai2/d912pxy){:target="_blank"} | [mesa-dist(OGL转D3D/VK/软渲染)](https://github.com/pal1000/mesa-dist-win/){:target="_blank"}  
 
 ### 管理工具
-#### <img src="https://playnite.link/favicon.ico" height="20">[Playnite](https://playnite.link/){:target="_blank"}
+#### <img src="https://playnite.link/favicon.ico" height="20">[Playnite](https://playnite.link/){:target="_blank"}  
+
+### 硬件管理工具
+#### [RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html){:target="_blank"}<img src="res/info.svg" height="15" title="N卡用户为什么不用驱动自带的Alt+R呢">  
+
 
 <br>
 <br>
