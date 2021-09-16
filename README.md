@@ -51,7 +51,9 @@
 ### 硬件管理工具
 #### [RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html){:target="_blank"}<img src="res/info.svg" height="15" title="N卡用户为什么不用驱动自带的Alt+R呢">  
 
-
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -62,5 +64,10 @@
 
 ###### 本网站使用`Google Analytics`分析用户流量，该过程是完全匿名的，数据用于调整页面内的链接布局  
 
+***
+
+#### 广告
+`本站只接非游戏广告`
+[![京东广告](AD/JDAD.jpg)](https://union-click.jd.com/jdc?e=&p=JF8BAJgJK1olXDYDZBoCUBVIMzZNXhpXVhgcFgcZVBsIWDoXSQVJQzZxHwM8bi5LZw8KfQwRLRhVAAM7cw5nD2M4G1kdXA4HZF1cCUISBWcAHFslbQYBZBUzCXsUAm4PGFoRWQIAZF5aCksRB20JElMVVA8yU15UOAsTBmkIGVwJWQMGXFtbOHsnAF84K1olXjZdEAMAOEkWAmsBKw)
 
 
