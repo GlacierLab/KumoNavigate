@@ -15,12 +15,12 @@
 
 ## CDKEY销售网站
 `销售可在游戏平台激活的CDKEY的网站`
-#### <img src="https://humblebundle-a.akamaihd.net/static/hashed/46cf2ed85a0641bfdc052121786440c70da77d75.png" height="20">[HumbleBundle](https://www.humblebundle.com/){:target="_blank"}<img src="res/info.svg" height="15" title="该网站同时也独立提供正版游戏的下载"> | <img src="https://plati.ru/favicon.ico" height="20">[Plati](https://plati.ru/){:target="_blank"}<img src="res/info.svg" height="15" title="支持支付宝。该网站也提供游戏账号交易，请认真辨别是CDKEY还是账号！"> | <img src="https://www.g2a.com/static/assets/apple-touch-icon.png" height="20">[G2A](https://www.g2a.com/){:target="_blank"} | <img src="https://cdn.fanatical.com/production/icons/android-chrome-192x192.png" height="20">[Fanatical](https://www.fanatical.com/){:target="_blank"}  
+#### <img src="https://humblebundle-a.akamaihd.net/static/hashed/46cf2ed85a0641bfdc052121786440c70da77d75.png" height="20">[HumbleBundle](https://www.humblebundle.com/){:target="_blank"}<img src="res/info.svg" height="15" title="该网站同时也独立提供正版游戏的下载"> | <img src="https://plati.ru/favicon.ico" height="20">[Plati](https://plati.ru/){:target="_blank"}<img src="res/info.svg" height="15" title="支持支付宝。该网站也提供游戏账号交易，请认真辨别是CDKEY还是账号！"> | <img src="https://www.g2a.com/static/assets/apple-touch-icon.png" height="20">[G2A](https://www.g2a.com/){:target="_blank"} | <img src="https://cdn.fanatical.com/production/icons/android-chrome-192x192.png" height="20">[Fanatical](https://www.fanatical.com/){:target="_blank"} | <img src="https://static.kinguin.net/madka/7.104.2/images/icons/icon_180x180.png" height="20">[Kinguin](https://www.kinguin.net/){:target="_blank"} | <img src="https://cdn.cdkeys.com/media/favicon/default/cdkeys_fav.jpg" height="20">[CDKeys](https://www.cdkeys.com/){:target="_blank"} | <img src="https://images.greenmangaming.com/static/favicon.ico" height="20">[Green Man Gaming](https://www.greenmangaming.com/){:target="_blank"}  
 
 
 ## 游戏数据信息网站
 `收集游戏各类信息供公开查阅的网站`
-#### <img src="https://steamdb.info/favicon.ico" height="20">[SteamDB](https://steamdb.info/){:target="_blank"}<img src="res/info.svg" height="15" title="提供Steam平台的各类游戏数据"> | <img src="https://www.gamerpower.com/favicon/apple-touch-icon.png" height="20">[GamerPower](https://www.gamerpower.com/){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏限免资讯"> | <img src="https://static.pcgamingwiki.com/favicons/pcgamingwiki.png" height="20">[PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏运行疑难解答，包括优化技巧">  
+#### <img src="https://steamdb.info/favicon.ico" height="20">[SteamDB](https://steamdb.info/){:target="_blank"}<img src="res/info.svg" height="15" title="提供Steam平台的各类游戏数据"> | <img src="https://www.gamerpower.com/favicon/apple-touch-icon.png" height="20">[GamerPower](https://www.gamerpower.com/){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏限免资讯"> | <img src="https://static.pcgamingwiki.com/favicons/pcgamingwiki.png" height="20">[PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏运行疑难解答，包括优化技巧"> | <img src="https://www.protondb.com/sites/protondb/images/favicon.ico" height="20">[ProtonDB](https://www.protondb.com/){:target="_blank"}<img src="res/info.svg" height="15" title="提供Proton游戏兼容性数据"> | <img src="https://static.pcgamingwiki.com/favicons/applegamingwiki.png" height="20">[AppleGamingWiki](https://www.applegamingwiki.com/wiki/Home){:target="_blank"}<img src="res/info.svg" height="15" title="提供Apple Silicon芯片的游戏兼容性数据">  
 
 ### 游戏评测与资讯网站
 #### <img src="https://www.metacritic.com/MC_favicon.png" height="20">[metacritic](https://www.metacritic.com/game){:target="_blank"} | <img src="https://kraken.ignimgs.com/favicon.ico" height="20">[IGN](https://www.ign.com/){:target="_blank"}  
@@ -45,6 +45,8 @@
 ### 图形API转换
 #### [dxvk(DX9-11转VK)](https://github.com/doitsujin/dxvk){:target="_blank"} | [dgVoodoo2(Glide/DX1-9转DX11/12)](http://dege.freeweb.hu/dgVoodoo2/){:target="_blank"} | [vkd3d(DX12转VK)](https://github.com/HansKristian-Work/vkd3d-proton){:target="_blank"} | [WineD3D(DX1-11转OGL/VK)](https://fdossena.com/?p=wined3d/index.frag){:target="_blank"} | [d912pxy(DX9转DX12)](https://github.com/megai2/d912pxy){:target="_blank"} | [mesa-dist(OGL转D3D/VK/软渲染)](https://github.com/pal1000/mesa-dist-win/){:target="_blank"}  
 
+### 管理工具
+#### <img src="https://playnite.link/favicon.ico" height="20">[Playnite](https://playnite.link/){:target="_blank"}
 
 <br>
 <br>
