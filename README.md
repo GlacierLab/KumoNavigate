@@ -1,6 +1,5 @@
-# 云酱·`游戏导航`·[轻启动beta](SilentLaunch.md)
-###### 坚决只收录官方网址，放心省心
-##### 请善用`Ctrl`+`F`查找，如见到此图标<img src="res/info.svg" height="15" title="我是一个提示">可把鼠标悬停查看提示，移动端长按此图标也可查看
+# 云酱·`游戏导航`
+#### > [轻启动beta](SilentLaunch.md) · [驱动导航](Driver.md)
 
 
 ## 游戏平台
@@ -62,6 +61,8 @@
 
 #### <img src="https://qinlili.bid/favicon.ico" height="20">[@琴梨梨](https://qinlili.bid){:target="_blank"} | [提建议](https://github.com/GlacierLab/KumoNavigate/issues/new){:target="_blank"}
 
+###### 坚决只收录官方网址，放心省心
+##### 请善用`Ctrl`+`F`查找，如见到此图标<img src="res/info.svg" height="15" title="我是一个提示">可把鼠标悬停查看提示，移动端长按此图标也可查看
 ###### 本网站使用`Google Analytics`分析用户流量，该过程是完全匿名的，数据用于调整页面内的链接布局  
 
 ***
