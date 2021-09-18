@@ -6,3 +6,5 @@
 #### <img src="https://www.nvidia.com/favicon.ico" height="20">[Nvidia](https://www.nvidia.com/Download/index.aspx){:target="_blank"} 
 
 #### <img src="https://www.intel.com/etc.clientlibs/settings/wcm/designs/intel/default/resources/favicon-32x32.png" height="20">[Intel](https://www.intel.com/content/www/us/en/download-center/home.html){:target="_blank"}
+
+#### <img src="https://www.amd.com/themes/custom/amd/favicon.ico" height="20">[AMD](https://www.amd.com/en/support){:target="_blank"} 
