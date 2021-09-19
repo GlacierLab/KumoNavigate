@@ -1,5 +1,6 @@
 # 云酱·`游戏导航`
 #### > [轻启动beta](SilentLaunch.md) · [驱动导航](Driver.md)
+<link rel="canonical" href="https://github.com/GlacierLab/KumoNavigate/" />
 
 
 ## 游戏平台
