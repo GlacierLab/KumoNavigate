@@ -5,7 +5,7 @@
   "short_name": "云酱",
   "icons": [{
       "src": "icon.png",
-      "sizes": "512x513",
+      "sizes": "513x513",
       "type": "image/png"
     }],
   "start_url": "/index.html",
