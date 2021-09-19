@@ -1,0 +1,17 @@
+{
+  "dir": "ltr",
+  "scope": "/",
+  "name": "云酱游戏导航",
+  "short_name": "云酱",
+  "icons": [{
+      "src": "icon.png",
+      "sizes": "512x513",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "lang": "cn",
+  "orientation": "portrait",
+  "background_color": "#DFAEFF",
+  "theme_color": "#DFAEFF"
+}
