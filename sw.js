@@ -8,10 +8,12 @@ var URLS = [
 
 // Respond with cached resources
 self.addEventListener('fetch', function (event) {
+    console.log('fetch request : ' + event.request.url)
     event.respondWith(
         caches.open(CACHE_NAME).then(function (cache) {
             return cache.match(event.request).then(function (response) {
                 return response || fetch(event.request).then(function (response) {
+                    console.log('file is not cached, fetching : ' + event.request.url)
                     cache.put(event.request, response.clone());
                     return response;
                 });
