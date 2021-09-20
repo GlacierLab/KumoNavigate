@@ -7,26 +7,18 @@ var URLS = [
 ]
 
 // Respond with cached resources
-self.addEventListener('fetch', function (e) {
-    console.log('fetch request : ' + e.request.url)
-    e.respondWith(
+self.addEventListener('fetch', function (event) {
+    event.respondWith(
         caches.open(CACHE_NAME).then(function (cache) {
-            caches.match(e.request).then(function (request) {
-                if (request) { // if cache is available, respond with cache
-                    console.log('responding with cache : ' + e.request.url)
-                    return request
-                } else {       // if there are no cache, try fetching request
-                    console.log('file is not cached, fetching : ' + e.request.url)
-                    fetch(e.request).then(function (response) {
-                        cache.put(e.request, response.clone());
-                        return response;
-                    });
-                }
-            })
+            return cache.match(event.request).then(function (response) {
+                return response || fetch(event.request).then(function (response) {
+                    cache.put(event.request, response.clone());
+                    return response;
+                });
+            });
         })
-    )
-})
-
+    );
+});
 // Cache resources
 self.addEventListener('install', function (e) {
     e.waitUntil(
