@@ -14,7 +14,10 @@ self.addEventListener('fetch', function (event) {
             return cache.match(event.request).then(function (response) {
                 return response || fetch(event.request).then(function (response) {
                     console.log('file is not cached, fetching : ' + event.request.url)
-                    cache.put(event.request, response.clone());
+                    if (event.request.method == "GET") {
+                        cache.put(event.request, response.clone());
+                        console.log('file cached : ' + event.request.url)
+                    }
                     return response;
                 });
             });
