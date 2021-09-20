@@ -63,7 +63,7 @@
 ###### 坚决只收录官方网址，放心省心
 ##### 请善用`Ctrl`+`F`查找，如见到此图标<img src="res/info.svg" height="15" title="我是一个提示">可把鼠标悬停查看提示，移动端长按此图标也可查看
 ###### 本网站使用`Google Analytics`分析用户流量，该过程是完全匿名的，数据用于调整页面内的链接布局  
-###### <div>Site icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+###### Site icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 ###### 当前页面版本：`20210919` [<img src="res/refresh.svg" height="15">](PurgeCache.html)
 
 ***
