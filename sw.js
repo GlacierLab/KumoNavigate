@@ -3,10 +3,7 @@ var VERSION = '20210920'              // Version of the off-line cache (change t
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
     '/',
-    '/index.html',
-    'https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js',
-    'https://static.cloudflareinsights.com/beacon.min.js',
-    'https://www.google-analytics.com/analytics.js'
+    '/index.html'
 ]
 
 // Respond with cached resources
