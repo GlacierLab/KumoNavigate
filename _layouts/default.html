@@ -47,9 +47,16 @@
       {{ content }}
     </div>
     <script>
-  if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js', {scope: '/'})
-  }
+if(document.getElementById("mdjs")){
+var jsurl=document.getElementById("mdjs").getAttribute("mdjs")
+var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsurl;
+        document.body.appendChild(script);
+        script.onload=function(){
+console.log("mdjs loaded success")
+}
+}
   </script>
   </body>
 </html>
