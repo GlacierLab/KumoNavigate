@@ -47,6 +47,7 @@
       {{ content }}
     </div>
     <script>
+function mdjsasync(){
 if(document.getElementById("mdjs")){
 var jsurl=document.getElementById("mdjs").getAttribute("mdjs")
 var script = document.createElement("script");
@@ -57,6 +58,8 @@ var script = document.createElement("script");
 console.log("mdjs loaded success")
 }
 }
+}
+setTimeout(mdjsasync,5000)
   </script>
   </body>
 </html>
