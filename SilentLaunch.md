@@ -8,5 +8,5 @@
 <a href="steam://silent -silent">Steam</a>  
 <a href="com.epicgames.launcher://launch?silent=true">Epic</a>  
 <a href="origin://launch -AutoStart">Origin</a>  
-<a href="uplay://launch -uplay_silent">UbiConnect(暂不可用)</a>  
+<a href="uplay2://launch">UbiConnect</a>(请先导入[此注册表补丁](attatch/gog.reg){:target="_blank"}并编辑为你的UbiConnect安装位置)  
 <a href="goggalaxy2://launch /launchViaAutoStart">GOG</a>(请先导入[此注册表补丁](attatch/gog.reg){:target="_blank"}并编辑为你的GOG安装位置)  
