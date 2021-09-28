@@ -8,5 +8,5 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\goggalaxy2\shell\open]
 
 [HKEY_CLASSES_ROOT\goggalaxy2\shell\open\command]
-@="\"D:\\Games\\Platforms\\GOG Galaxy\\GalaxyClient.exe\" %1"
+@="\"D:\\Games\\Platforms\\GOG Galaxy\\GalaxyClient.exe\" /launchViaAutoStart"
 
