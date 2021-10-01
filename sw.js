@@ -9,20 +9,23 @@ var URLS = [
 // Respond with cached resources
 self.addEventListener('fetch', function (event) {
     console.log('fetch request : ' + event.request.url)
-    event.respondWith(
-        caches.open(CACHE_NAME).then(function (cache) {
-            return cache.match(event.request).then(function (response) {
-                return response || fetch(event.request).then(function (response) {
-                    console.log('file is not cached, fetching : ' + event.request.url)
-                    if (event.request.method == "GET") {
+    if (event.request.method == "GET") {
+        event.respondWith(
+            caches.open(CACHE_NAME).then(function (cache) {
+                return cache.match(event.request).then(function (response) {
+                    return response || fetch(event.request).then(function (response) {
+                        console.log('file is not cached, fetching : ' + event.request.url)
                         cache.put(event.request, response.clone());
                         console.log('file cached : ' + event.request.url)
-                    }
-                    return response;
+                        return response;
+                    });
                 });
-            });
-        })
-    );
+            })
+
+        );
+    } else {
+        event.respondWith(fetch(event.request))
+    }
 });
 // Cache resources
 self.addEventListener('install', function (e) {
