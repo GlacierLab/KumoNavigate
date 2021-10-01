@@ -64,7 +64,7 @@
 ##### 请善用`Ctrl`+`F`查找，如见到此图标<img src="res/info.svg" height="15" title="我是一个提示">可把鼠标悬停查看提示，移动端长按此图标也可查看
 ###### 本网站使用`Google Analytics`和`Cloudflare Web Analytics`分析用户流量，该过程是完全匿名的，数据用于优化本站服务质量，绝不会将数据出售给任何第三方  
 ###### Site icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-###### 当前页面版本：`20210927` [<img src="res/refresh.svg" height="15">](PurgeCache.html)
+###### 当前页面版本：`20211001` [<img src="res/refresh.svg" height="15">](PurgeCache.html)
 
 ***
 
