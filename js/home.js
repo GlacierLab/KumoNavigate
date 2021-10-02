@@ -17,7 +17,7 @@ if (GPUinfo) {
     var GPUname = GPUinfo.renderer;
     var GPUdriver = false;
     if (GPUinfo.renderer.indexOf("ANGLE") == 0) {
-        GPUdriver = GPUname.substring(GPUname.indexOf("-") + 1, GPUname.indexOf(")"))
+        GPUdriver = GPUname.substring(GPUname.indexOf("-") + 1, GPUname.length-1)
         GPUname = GPUname.substring(GPUname.indexOf(",") + 2, GPUname.indexOf("Direct3D") - 1);
     }
     var GPUele = document.createElement("h6")
