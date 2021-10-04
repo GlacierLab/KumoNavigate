@@ -25,6 +25,9 @@ if (GPUinfo) {
     if (GPUdriver) {
         GPUele.innerHTML += "显卡驱动：" + atob("PGNvZGUgY2xhc3M9Imxhbmd1YWdlLXBsYWludGV4dCBoaWdobGlnaHRlci1yb3VnZSI+") + GPUdriver + "</code>"
     }
+    if (navigator.userAgent.indexOf("Firefox") > 1) {
+        GPUele.innerHTML +="Firefox的某个Bug可能导致未能正确检测"
+    }
     document.getElementsByTagName("hr")[1].parentNode.insertBefore(GPUele, document.getElementsByTagName("hr")[1])
 } else {
     console.log("Cannot Get GPU Info!")
