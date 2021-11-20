@@ -1,6 +1,9 @@
 if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/sw.js', {scope: '/'})
   }
+if(navigator.userAgent.indexOf("WOW64")>1){
+   alert("你正在64位操作系统上使用32位浏览器！\n为了更快的访问速度请改用64位浏览器！")
+}
 function getVideoCardInfo() {
     const gl = document.createElement('canvas').getContext('webgl');
     if (!gl) {
