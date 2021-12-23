@@ -17,8 +17,12 @@
 
 
 ## 游戏数据信息网站
-`收集游戏各类信息供公开查阅的网站`
-#### <img src="https://steamdb.info/favicon.ico" height="20">[SteamDB](https://steamdb.info/){:target="_blank"}<img src="res/info.svg" height="15" title="提供Steam平台的各类游戏数据"> | <img src="https://d2uym1p5obf9p8.cloudfront.net/images/favicon.png" height="20">[IsThereAnyDeal](https://isthereanydeal.com/){:target="_blank"}<img src="res/info.svg" height="15" title="游戏比价"> | <img src="https://www.gamerpower.com/favicon/apple-touch-icon.png" height="20">[GamerPower](https://www.gamerpower.com/){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏限免资讯"> | <img src="https://static.pcgamingwiki.com/favicons/pcgamingwiki.png" height="20">[PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏运行疑难解答，包括优化技巧"> | <img src="https://www.protondb.com/sites/protondb/images/favicon.ico" height="20">[ProtonDB](https://www.protondb.com/){:target="_blank"}<img src="res/info.svg" height="15" title="提供Proton游戏兼容性数据"> | <img src="https://static.pcgamingwiki.com/favicons/applegamingwiki.png" height="20">[AppleGamingWiki](https://www.applegamingwiki.com/wiki/Home){:target="_blank"}<img src="res/info.svg" height="15" title="提供Apple Silicon芯片的游戏兼容性数据"> | <img src="https://www.op.gg/favicon.ico?5" height="20">[OP.GG](https://www.op.gg/){:target="_blank"}<img src="res/info.svg" height="15" title="提供LOL数据和资讯">  
+`收集游戏各类信息供公开查阅的网站`  
+### 收录大量游戏的数据库网站
+#### <img src="https://steamdb.info/favicon.ico" height="20">[SteamDB](https://steamdb.info/){:target="_blank"}<img src="res/info.svg" height="15" title="提供Steam平台的各类游戏数据"> | <img src="https://d2uym1p5obf9p8.cloudfront.net/images/favicon.png" height="20">[IsThereAnyDeal](https://isthereanydeal.com/){:target="_blank"}<img src="res/info.svg" height="15" title="游戏比价"> | <img src="https://www.gamerpower.com/favicon/apple-touch-icon.png" height="20">[GamerPower](https://www.gamerpower.com/){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏限免资讯"> | <img src="https://static.pcgamingwiki.com/favicons/pcgamingwiki.png" height="20">[PCGamingWiki](https://www.pcgamingwiki.com/wiki/Home){:target="_blank"}<img src="res/info.svg" height="15" title="提供游戏运行疑难解答，包括优化技巧"> | <img src="https://www.protondb.com/sites/protondb/images/favicon.ico" height="20">[ProtonDB](https://www.protondb.com/){:target="_blank"}<img src="res/info.svg" height="15" title="提供Proton游戏兼容性数据"> | <img src="https://static.pcgamingwiki.com/favicons/applegamingwiki.png" height="20">[AppleGamingWiki](https://www.applegamingwiki.com/wiki/Home){:target="_blank"}<img src="res/info.svg" height="15" title="提供Apple Silicon芯片的游戏兼容性数据">  
+
+### 针对特定游戏内容的网站
+#### <img src="https://www.op.gg/favicon.ico?5" height="20">[OP.GG](https://www.op.gg/){:target="_blank"}<img src="res/info.svg" height="15" title="提供LOL数据和资讯"> | <img src="https://zh.stardewvalleywiki.com/mediawiki/extensions/StardewValley/images/favicon.png" height="20">[星露谷物语官方维基](https://zh.stardewvalleywiki.com/){:target="_blank"}  
 
 ### 游戏评测与资讯网站
 #### <img src="https://www.metacritic.com/MC_favicon.png" height="20">[metacritic](https://www.metacritic.com/game){:target="_blank"} | <img src="https://kraken.ignimgs.com/favicon.ico" height="20">[IGN](https://www.ign.com/){:target="_blank"}  
@@ -67,7 +71,7 @@
 ##### 请善用`Ctrl`+`F`查找，如见到此图标<img src="res/info.svg" height="15" title="我是一个提示">可把鼠标悬停查看提示，移动端长按此图标也可查看
 ###### 本网站使用`Google Analytics`和`Cloudflare Web Analytics`分析用户流量，该过程是完全匿名的，数据用于优化本站服务质量，绝不会将数据出售给任何第三方  
 ###### Site icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-###### 当前页面版本：`20211211` [<img src="res/refresh.svg" height="15">](PurgeCache.html)
+###### 当前页面版本：`20211223` [<img src="res/refresh.svg" height="15">](PurgeCache.html)
 
 ***
 
