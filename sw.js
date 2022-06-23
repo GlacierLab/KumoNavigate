@@ -9,7 +9,7 @@ var URLS = [
 // Respond with cached resources
 self.addEventListener('fetch', function (event) {
     console.log('fetch request : ' + event.request.url)
-    if (event.request.method == "GET" && (event.request.url.indexOf("http") == 0)) {
+    if (event.request.method == "GET" && (event.request.url.indexOf("http") == 0) && (event.request.url.indexOf("doubleclick") == -1) && (event.request.url.indexOf("google") == -1)) {
         event.respondWith(
             caches.open(CACHE_NAME).then(function (cache) {
                 return cache.match(event.request).then(function (response) {
