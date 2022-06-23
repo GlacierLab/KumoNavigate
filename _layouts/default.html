@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#DFAEFF">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://github.com/GlacierLab/KumoNavigate/" />
-    <link rel="icon" type="image/png" href="/icon.png">
-    <link rel="manifest" href="/manifest.json">
+<html lang="{{ page.lang | default: site.lang | default: " en-US" }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#DFAEFF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://github.com/GlacierLab/KumoNavigate/" />
+  <link rel="icon" type="image/png" href="/icon.png">
+  <link rel="manifest" href="/manifest.json">
   <style type="text/css">
     ::-webkit-scrollbar {
       height: 12px;
@@ -36,31 +37,40 @@
     ::-webkit-scrollbar-corner {
       background: #202020;
     }
-
   </style>
 
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      {{ content }}
-    </div>
-    <script>
-function mdjsasync(){
-if(document.getElementById("mdjs")){
-var jsurl=document.getElementById("mdjs").getAttribute("mdjs")
-var script = document.createElement("script");
+  {% seo %}
+  <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  {% include head-custom.html %}
+</head>
+
+<body>
+  <div class="container-lg px-3 my-5 markdown-body">
+    {{ content }}
+  </div>
+  <script>
+    function mdjsasync() {
+      if (document.getElementById("mdjs")) {
+        var jsurl = document.getElementById("mdjs").getAttribute("mdjs")
+        var script = document.createElement("script");
         script.type = "text/javascript";
         script.src = jsurl;
         document.body.appendChild(script);
-        script.onload=function(){
-console.log("mdjs loaded success")
-}
-}
-}
-setTimeout(mdjsasync,5000)
+        script.onload = function () {
+          console.log("mdjs loaded success")
+        }
+      }
+    }
+    setTimeout(mdjsasync, 3000)
   </script>
-  </body>
+  <h4>广告</h4>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1806614386308377"
+    crossorigin="anonymous"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-ed+5p-2-bb+pw"
+    data-ad-client="ca-pub-1806614386308377" data-ad-slot="7207086692"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</body>
+
 </html>

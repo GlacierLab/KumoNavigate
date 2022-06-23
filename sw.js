@@ -1,5 +1,5 @@
 var APP_PREFIX = '云酱游戏导航'     // Identifier for this app (this needs to be consistent across every cache update)
-var VERSION = '20211223'              // Version of the off-line cache (change this value everytime you want to update cache)
+var VERSION = '20220623'              // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [
     '/',
@@ -9,7 +9,7 @@ var URLS = [
 // Respond with cached resources
 self.addEventListener('fetch', function (event) {
     console.log('fetch request : ' + event.request.url)
-    if (event.request.method == "GET"&&(event.request.url.indexOf("http")==0)) {
+    if (event.request.method == "GET" && (event.request.url.indexOf("http") == 0)) {
         event.respondWith(
             caches.open(CACHE_NAME).then(function (cache) {
                 return cache.match(event.request).then(function (response) {
