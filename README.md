@@ -33,6 +33,7 @@
 
 ## 模拟技术软件
 `在PC上运行其他设备游戏所使用的软件，括号内为可模拟的设备类型，本导航不包括游戏资源，请自行通过合法途径下载游戏资源`
+#### 推荐前往<img src="https://emulation.gametechwiki.com/images/favicon.ico" height="20">[EMUGEN Wiki](https://emulation.gametechwiki.com/index.php/Main_Page)了解更多模拟信息
 #### <img src="https://rpcs3.net/img/meta/favicon/196.png" height="20">[RPCS3(PS3)](https://rpcs3.net/){:target="_blank"}   | <img src="https://vita3k.org/img/logo.svg" height="20">[Vita3K(PSV)](https://vita3k.org/){:target="_blank"} | <img src="https://yuzu-emu.org/favicon.ico" height="20">[yuzu(NS)](https://yuzu-emu.org/){:target="_blank"}   | <img src="https://github.com/ps4emurepo.png?s=20" height="20">[PCSX4(PS4)](https://pcsx4.com/){:target="_blank"} | <img src="https://res02.noxgroup.com/noxplayer/2021/09/static/img/images/92d64a31.png" height="20">[夜神模拟器(Android)](https://en.bignox.com/){:target="_blank"}<img src="res/info.svg" height="15" title="英文版没广告，别切回中文"> | <img src="https://www.retroarch.com/images/logo.png" height="20">[RetroArch](https://www.retroarch.com/){:target="_blank"}| <img src="https://teknogods.github.io/img/teknoparrot-logo.png" height="20">[TeknoParrot(街机)](https://teknogods.github.io/index.html){:target="_blank"} | <img src="https://store-images.s-microsoft.com/image/apps.51780.14545790782662156.958792d4-4b5d-4ce0-8679-8d56984ee999.901bcb54-d2db-4a30-a7ad-391f73965392" height="20">[WSA(Android)](https://www.microsoft.com/store/productId/9P3395VX91NR){:target="_blank"}()    
 
 
@@ -74,7 +75,7 @@
 ##### 请善用`Ctrl`+`F`查找，如见到此图标<img src="res/info.svg" height="15" title="我是一个提示">可把鼠标悬停查看提示，移动端长按此图标也可查看
 ###### 本网站使用`Google Analytics`和`Cloudflare Web Analytics`分析用户流量，该过程是完全匿名的，数据用于优化本站服务质量，绝不会将数据出售给任何第三方  
 ###### Site icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-###### 当前页面版本：`20220623` [<img src="res/refresh.svg" height="15">](PurgeCache.html)
+###### 当前页面版本：`20220927` [<img src="res/refresh.svg" height="15">](PurgeCache.html)
 
 ***
 
