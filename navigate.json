@@ -141,6 +141,16 @@
             ]
         },
         {
+            "name": "云游戏",
+            "icon": "/static/icon/cloud.svg",
+            "sublist": [
+                {
+                    "name": "基于远程渲染的游戏体验",
+                    "intro": true
+                }
+            ]
+        },
+        {
             "name": "CDKEY销售",
             "icon": "/static/icon/key.svg",
             "sublist": [
@@ -156,6 +166,16 @@
             "sublist": [
                 {
                     "name": "为在线游戏充值的网站\n为防止低价代充诈骗，本站只提供官方认可的充值渠道",
+                    "intro": true
+                }
+            ]
+        },
+        {
+            "name": "主机销售",
+            "icon": "/static/icon/console.svg",
+            "sublist": [
+                {
+                    "name": "在线购买主机游戏",
                     "intro": true
                 }
             ]
