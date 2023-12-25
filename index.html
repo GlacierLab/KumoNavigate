@@ -316,7 +316,7 @@
 
         .sideItem {
             cursor: pointer;
-            border-radius: 16px;
+            border-radius: 8px;
             background-color: transparent;
             align-items: center;
             width: 100%;
@@ -326,13 +326,13 @@
             padding-top: 12px;
             padding-bottom: 12px;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             transition: all 0.2s;
         }
 
         .sideItem:hover,
         .listItem:hover {
-            border-radius: 8px;
+            border-radius: 4px;
             background-color: rgba(0, 0, 0, 0.15);
         }
 
@@ -494,13 +494,21 @@
             }
         }
 
-        @media (max-width:300px) {
+        @media (max-width:400px) {
+            .sideItem {
+                padding-left: 2px;
+                padding-right: 2px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                border-radius: 6px;
+            }
+
             .sideItemIcon {
                 display: none;
             }
 
             .sideItemTitle {
-                font-size: 0.85em;
+                font-size: 0.875em;
             }
 
             .listItem {
@@ -508,14 +516,20 @@
             }
 
             .side {
-                width: 96px;
+                width: 80px;
             }
 
             .list {
-                width: calc(100vw - 96px);
+                width: calc(100vw - 80px);
             }
 
             H1 {
+                display: none;
+            }
+        }
+
+        @media (max-width:200px) {
+            .listItemTextGroup {
                 display: none;
             }
         }
@@ -537,7 +551,7 @@
                 margin-left: 0px;
                 font-weight: 500;
 
-                @media (max-width:450px) {
+                @media (max-width:250px) {
                     display: none;
                 }
             }
