@@ -1,0 +1,25 @@
+﻿{
+    "version": "20231225",
+    "top": [
+        {
+            "icon": "/static/icon/desktop.svg",
+            "info": "云酱桌面版正在开发中，别急！",
+            "url": ""
+        }
+    ],
+    "list": [
+        {
+            "name": "游戏平台",
+            "icon": "/static/icon/store.svg",
+            "sublist": [
+                {
+                    "name": "Steam",
+                    "icon": "https://store.steampowered.com/favicon.ico",
+                    "description": "最大的国际游戏平台",
+                    "url": "https://store.steampowered.com/",
+                    "external": true
+                }
+            ]
+        }
+    ]
+}

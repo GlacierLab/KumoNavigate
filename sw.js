@@ -1,10 +1,7 @@
-var APP_PREFIX = '云酱游戏导航'     // Identifier for this app (this needs to be consistent across every cache update)
-var VERSION = '1.20230904'             // Version of the off-line cache (change this value everytime you want to update cache)
+var APP_PREFIX = '云酱游戏导航';
+var VERSION = '2.20231225';
 var CACHE_NAME = APP_PREFIX + VERSION
-var URLS = [
-    '/',
-    '/index.html'
-]
+var URLS = []
 
 // Respond with cached resources
 self.addEventListener('fetch', function (event) {
