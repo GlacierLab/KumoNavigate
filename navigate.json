@@ -14,28 +14,107 @@
             "sublist": [
                 {
                     "name": "一站式安装和管理游戏的软件",
-                    "divider": true
+                    "intro": true
                 },
                 {
                     "name": "Steam",
-                    "icon": "https://store.steampowered.com/favicon.ico",
+                    "icon": "/static/logo/steam.webp",
                     "description": "最大的国际游戏平台",
-                    "url": "https://store.steampowered.com/",
-                    "external": true
+                    "url": "https://store.steampowered.com/"
                 },
                 {
                     "name": "蒸汽平台",
-                    "icon": "https://store.steamchina.com/favicon.ico",
+                    "icon": "/static/logo/steamchina.webp",
                     "description": "完美世界控制的国服",
-                    "url": "https://store.steamchina.com/",
-                    "external": true
+                    "url": "https://store.steamchina.com/"
                 },
                 {
                     "name": "WeGame",
-                    "icon": "https://www.wegame.com.cn/favicon.ico",
+                    "icon": "/static/logo/wegame.svg",
                     "description": "腾讯游戏平台",
-                    "url": "https://www.wegame.com.cn/",
-                    "external": true
+                    "url": "https://www.wegame.com.cn/"
+                },
+                {
+                    "name": "Ubisoft Connect",
+                    "icon": "/static/logo/ubi.svg",
+                    "description": "旧称Uplay，育碧旗下",
+                    "url": "https://ubisoftconnect.com/"
+                },
+                {
+                    "name": "EA App",
+                    "icon": "/static/logo/ea.webp",
+                    "description": "EA新客户端，Origin已死",
+                    "url": "https://www.ea.com/ea-app"
+                },
+                {
+                    "name": "Epic Games",
+                    "icon": "/static/logo/epic.svg",
+                    "description": "每周五不嫖白不嫖",
+                    "url": "https://www.epicgames.com/"
+                },
+                {
+                    "name": "Amazon Games",
+                    "icon": "/static/logo/prime.webp",
+                    "description": "Prime会员的一部分",
+                    "url": "https://gaming.amazon.com/"
+                },
+                {
+                    "name": "GOG",
+                    "icon": "/static/logo/gog.svg",
+                    "description": "波兰蠢驴旗下",
+                    "url": "https://www.gog.com/"
+                },
+                {
+                    "name": "Battle.net",
+                    "icon": "/static/logo/battle.svg",
+                    "description": "你猜国服啥时打赢复活赛",
+                    "url": "https://download.battle.net/zh-cn/desktop"
+                },
+                {
+                    "name": "DMM Games",
+                    "icon": "/static/logo/dmm.svg",
+                    "description": "需要日本IP",
+                    "url": "http://www.dmm.com/netgame/top/guide/playerguide_html/=/ch_navi=/"
+                },
+                {
+                    "name": "Indiegala",
+                    "icon": "/static/logo/ig.webp",
+                    "description": "客户端不好用，建议网页下游戏",
+                    "url": "https://www.indiegala.com/"
+                },
+                {
+                    "name": "Microsoft Store",
+                    "icon": "/static/logo/msstore.webp",
+                    "description": "打不开说明系统不完整",
+                    "url": "ms-windows-store://navigatetopage/?Id=Gaming"
+                },
+                {
+                    "name": "itch.io",
+                    "icon": "/static/logo/itchio.svg",
+                    "description": "打不开说明系统不完整",
+                    "url": "https://itch.io/"
+                },
+                {
+                    "name": "TC Game",
+                    "icon": "/static/logo/tcg.webp",
+                    "description": "世纪天成的屎烂客户端",
+                    "url": "https://tcg.tiancity.com/homepage/"
+                },
+                {
+                    "name": "多益战盟",
+                    "icon": "/static/logo/dy.webp",
+                    "description": "多益的客户端也屎烂",
+                    "url": "https://dygame.duoyi.com/"
+                }
+            ]
+        },
+        {
+            "name": "游戏官网",
+            "icon": "/static/icon/store.svg",
+            "sublist": [
+                {
+                    "name": "未上架游戏平台的游戏官网",
+                    "description": true
                 }
             ]
         }
