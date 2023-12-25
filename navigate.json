@@ -91,7 +91,7 @@
                 {
                     "name": "itch.io",
                     "icon": "/static/logo/itchio.svg",
-                    "description": "打不开说明系统不完整",
+                    "description": "网页版其实更方便",
                     "url": "https://itch.io/"
                 },
                 {
@@ -105,16 +105,144 @@
                     "icon": "/static/logo/dy.webp",
                     "description": "多益的客户端也屎烂",
                     "url": "https://dygame.duoyi.com/"
+                },
+                {
+                    "name": "方块游戏平台",
+                    "icon": "/static/logo/cube.webp",
+                    "description": "有绿色版是好文明",
+                    "url": "https://app.cubejoy.com/download.html"
+                },
+                {
+                    "name": "DLsite Nest",
+                    "icon": "/static/logo/dlsite.webp",
+                    "description": "系统语言需为日语",
+                    "url": "https://www.dlsite.com/soft/guide/dlnest"
                 }
             ]
         },
         {
             "name": "游戏官网",
-            "icon": "/static/icon/store.svg",
+            "icon": "/static/icon/site.svg",
             "sublist": [
                 {
                     "name": "未上架游戏平台的游戏官网",
-                    "description": true
+                    "intro": true
+                }
+            ]
+        },
+        {
+            "name": "网页游戏",
+            "icon": "/static/icon/web.svg",
+            "sublist": [
+                {
+                    "name": "在浏览器内运行的游戏",
+                    "intro": true
+                }
+            ]
+        },
+        {
+            "name": "CDKEY销售",
+            "icon": "/static/icon/key.svg",
+            "sublist": [
+                {
+                    "name": "销售可在游戏平台激活的CDKEY的网站\n云酱仅提供正规网站的链接，请谨慎辨别网站内各商户的信誉！",
+                    "intro": true
+                }
+            ]
+        },
+        {
+            "name": "游戏充值",
+            "icon": "/static/icon/wallet.svg",
+            "sublist": [
+                {
+                    "name": "为在线游戏充值的网站\n为防止低价代充诈骗，本站只提供官方认可的充值渠道",
+                    "intro": true
+                }
+            ]
+        },
+        {
+            "name": "资讯数据",
+            "icon": "/static/icon/news.svg",
+            "sublist": [
+                {
+                    "name": "收集游戏各类信息供公开查阅的网站",
+                    "intro": true
+                },
+                {
+                    "name": "收录大量游戏的数据库网站",
+                    "divider": true
+                },
+                {
+                    "name": "针对特定游戏内容的网站",
+                    "divider": true
+                },
+                {
+                    "name": "游戏评测与资讯",
+                    "divider": true
+                }
+            ]
+        },
+        {
+            "name": "模拟技术",
+            "icon": "/static/icon/emu.svg",
+            "sublist": [
+                {
+                    "name": "在PC上运行其他设备或系统游戏所使用的软件\n本站不提供游戏资源，请自行通过合法途径下载游戏资源",
+                    "intro": true
+                }
+            ]
+        },
+        {
+            "name": "游戏工具",
+            "icon": "/static/icon/tool.svg",
+            "sublist": [
+                {
+                    "name": "用于改善游戏体验的小软件",
+                    "intro": true
+                },
+                {
+                    "name": "优化工具",
+                    "divider": true
+                },
+                {
+                    "name": "图形API翻译",
+                    "divider": true
+                },
+                {
+                    "name": "游戏管理",
+                    "divider": true
+                },
+                {
+                    "name": "硬件监控",
+                    "divider": true
+                },
+                {
+                    "name": "网络优化",
+                    "divider": true
+                }
+            ]
+        },
+        {
+            "name": "开发者",
+            "icon": "/static/icon/dev.svg",
+            "sublist": [
+                {
+                    "name": "游戏开发需要用到的网站",
+                    "intro": true
+                },
+                {
+                    "name": "游戏引擎",
+                    "divider": true
+                }
+            ]
+        },
+        {
+            "name": "驱动导航",
+            "icon": "/static/icon/driver.svg",
+            "sublist": [
+                {
+                    "name": "设备驱动下载",
+                    "intro": true
                 }
             ]
         }
