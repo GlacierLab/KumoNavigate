@@ -18,6 +18,20 @@
                     "description": "最大的国际游戏平台",
                     "url": "https://store.steampowered.com/",
                     "external": true
+                },
+                {
+                    "name": "蒸汽平台",
+                    "icon": "https://store.steamchina.com/favicon.ico",
+                    "description": "完美世界控制的国服",
+                    "url": "https://store.steamchina.com/",
+                    "external": true
+                },
+                {
+                    "name": "WeGame",
+                    "icon": "https://www.wegame.com.cn/favicon.ico",
+                    "description": "腾讯游戏平台",
+                    "url": "https://www.wegame.com.cn/",
+                    "external": true
                 }
             ]
         }

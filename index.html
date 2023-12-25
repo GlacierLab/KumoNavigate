@@ -88,17 +88,21 @@
             padding: 4px;
             transition: all 0.3s;
             background-color: transparent;
+
+            &:hover {
+                border-radius: 0px;
+                background-color: rgba(0, 0, 0, 0.15);
+            }
+
+            &:active {
+                border-radius: 0px;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
         }
 
-        .navicon:hover {
-            border-radius: 0px;
-            background-color: rgba(0, 0, 0, 0.15);
-        }
 
-        .navicon:active {
-            border-radius: 0px;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
+
 
         .navicon-img {
             width: 100%;
@@ -112,11 +116,12 @@
             height: 24px;
             display: flex;
             cursor: pointer;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.15);
+            }
         }
 
-        #noti:hover {
-            background-color: rgba(0, 0, 0, 0.15);
-        }
 
         #notiIcon {
             width: 24px;
@@ -157,19 +162,23 @@
             border-radius: 0px;
             background-color: transparent;
             transition: all 0.2s;
+
+            &:hover {
+                border-radius: 4px;
+                background-color: #dfaeff93;
+                opacity: 0.9 !important;
+            }
+
+            &:active {
+                border-radius: 8px;
+                background-color: #DFAEFF;
+                opacity: 1 !important;
+            }
         }
 
-        .clickIcon:hover {
-            border-radius: 4px;
-            background-color: #dfaeff93;
-            opacity: 0.9 !important;
-        }
 
-        .clickIcon:active {
-            border-radius: 8px;
-            background-color: #DFAEFF;
-            opacity: 1 !important;
-        }
+
+
 
         input[role="textbox"] {
             background-color: transparent;
@@ -182,25 +191,31 @@
             margin-left: 8px;
             margin-right: 8px;
             border: none;
-            border-bottom: 1px solid #777777;
+            border-bottom: 1px solid #dfaeff93;
             outline: none;
             transition: all 0.2s linear;
+
+            &:focus-visible {
+                height: 27.25px !important;
+                border-bottom: 2px solid #dfaeff93 !important;
+            }
+
+            &:hover {
+                height: 26.75px;
+                border-bottom: 1.5px solid #dfaeff93;
+            }
+
+            &:active {
+                height: 27.25px !important;
+                border-bottom: 2px solid #DFAEFF !important;
+            }
         }
 
-        input[role="textbox"]:focus-visible {
-            height: 27.25px !important;
-            border-bottom: 2px solid #dfaeff93 !important;
-        }
 
-        input[role="textbox"]:hover {
-            height: 26.75px;
-            border-bottom: 1.5px solid #333333;
-        }
 
-        input[role="textbox"]:active {
-            height: 27.25px !important;
-            border-bottom: 2px solid #DFAEFF !important;
-        }
+
+
+
 
         #search {
             left: 0px;
@@ -220,7 +235,7 @@
             background-color: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(5px) brightness(90%);
             -webkit-backdrop-filter: blur(5px) brightness(90%);
-            box-shadow: 2px 2px 4px #FADCBB;
+            box-shadow: 2px 2px 4px #dfaeff;
             border-radius: 4px;
             transition: all 0.25s;
             flex-direction: column;
@@ -322,7 +337,7 @@
         }
 
         .sideItem[active] {
-            background-color: #FADCBB;
+            background-color: #dfaeff93;
         }
 
         .sideItem:active,
@@ -354,7 +369,8 @@
             padding: 8px;
             margin: 4px;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-evenly;
+            flex-grow: 1;
             transition: all 0.2s;
         }
 
@@ -498,6 +514,40 @@
             .list {
                 width: calc(100vw - 96px);
             }
+
+            H1 {
+                display: none;
+            }
+        }
+
+        .titleBtn {
+            display: flex;
+            flex-direction: row;
+            transition: all 0.15s;
+
+            &>img {
+                height: 40px;
+                width: 40px;
+                padding: 8px;
+            }
+
+            &>H3 {
+                line-height: 24px;
+                margin: 8px;
+                margin-left: 0px;
+
+                @media (max-width:450px) {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.15);
+            }
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
         }
     </style>
 </head>
@@ -507,11 +557,16 @@
         <div class="title" style="height:40px;justify-content: space-between;">
             <div class="title">
                 <img style="width:40px;height:40px;padding:4px;" src="icon.png">
-                <H1 style="margin:5px;line-height:30px;">云酱游戏导航</H1>
+                <H1 style="margin:5px;line-height:30px;font-size:1.75em;">云酱游戏导航</H1>
             </div>
             <div class="title">
                 <div class="titleBtn">
-
+                    <img src="/static/icon/desktop.svg">
+                    <H3>桌面版</H2>
+                </div>
+                <div class="titleBtn">
+                    <img src="/static/icon/info.svg">
+                    <H3>关于</H2>
                 </div>
             </div>
         </div>
