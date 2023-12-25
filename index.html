@@ -535,6 +535,7 @@
                 line-height: 24px;
                 margin: 8px;
                 margin-left: 0px;
+                font-weight: 500;
 
                 @media (max-width:450px) {
                     display: none;
@@ -549,6 +550,28 @@
                 background-color: rgba(0, 0, 0, 0.3);
             }
         }
+
+        hr {
+            width: 100%;
+            height: 8px;
+            color: #dfaeff;
+            overflow: visible;
+            border: none;
+            border-top: 2px solid;
+            margin: 8px;
+            margin-top: 12px;
+
+            &::after {
+                color: black;
+                font-size: .85em;
+                background-image: linear-gradient(transparent, white, white, transparent);
+                content: ' ' attr(name)' ';
+                padding: 0 4px;
+                position: relative;
+                top: -13px;
+                white-space: nowrap;
+            }
+        }
     </style>
 </head>
 
@@ -557,7 +580,7 @@
         <div class="title" style="height:40px;justify-content: space-between;">
             <div class="title">
                 <img style="width:40px;height:40px;padding:4px;" src="icon.png">
-                <H1 style="margin:5px;line-height:30px;font-size:1.75em;">云酱游戏导航</H1>
+                <H1 style="margin:5px;line-height:30px;font-size:1.75em;font-weight: 500;">云酱游戏导航</H1>
             </div>
             <div class="title">
                 <div class="titleBtn">
@@ -780,21 +803,6 @@
                         list.href = item.url;
                         item.external ? list.target = "_blank" : false;
                         list.oncontextmenu = (e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            const newMenu = (icon, text, click) => {
-                                const menu = document.createElement("div");
-                                menu.className = "menuItem";
-                                menu.innerHTML = `
-                                <img class="menuIcon" src="${icon}" crossorigin="anonymous" loading="lazy">
-                                <span class="menuText">${text}</span>
-                                `;
-                                menu.onclick = click;
-                                return document.getElementById("menuList").appendChild(menu);
-                            };
-                            item.deeplink ? newMenu("/img/app.svg", "唤起本地APP", () => { link(item.deeplink); }) : false;
-                            navigator.share ? newMenu("/img/share.svg", "分享", () => { navigator.share({ title: "item.title", text: item.description, url: item.url }) }) : false;
-                            Module.magicMenu.showMenu();
                         };
                         document.querySelector(".list").appendChild(list);
                     });

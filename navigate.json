@@ -13,6 +13,10 @@
             "icon": "/static/icon/store.svg",
             "sublist": [
                 {
+                    "name": "一站式安装和管理游戏的软件",
+                    "divider": true
+                },
+                {
                     "name": "Steam",
                     "icon": "https://store.steampowered.com/favicon.ico",
                     "description": "最大的国际游戏平台",
