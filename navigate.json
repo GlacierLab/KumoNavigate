@@ -86,7 +86,8 @@
                     "name": "Microsoft Store",
                     "icon": "/static/logo/msstore.webp",
                     "description": "打不开说明系统不完整",
-                    "url": "ms-windows-store://navigatetopage/?Id=Gaming"
+                    "url": "ms-windows-store://navigatetopage/?Id=Gaming",
+                    "desktop": "msstore"
                 },
                 {
                     "name": "itch.io",
@@ -126,6 +127,50 @@
             "sublist": [
                 {
                     "name": "未上架游戏平台的游戏官网",
+                    "intro": true
+                },
+                {
+                    "name": "网易游戏",
+                    "divider": true
+                },
+                {
+                    "name": "逆水寒",
+                    "icon": "/static/logo/netease/nsh.webp",
+                    "description": "6A级大作¿",
+                    "url": "https://n.163.com/index.html"
+                },
+                {
+                    "name": "腾讯游戏",
+                    "divider": true
+                },
+                {
+                    "name": "腾讯游戏下载大部分都会捆绑WeGame，建议直接下载WeGame",
+                    "intro": true
+                },
+                {
+                    "name": "米哈游",
+                    "divider": true
+                },
+                {
+                    "name": "原神|国服",
+                    "icon": "/static/logo/mihoyo/genshin.webp",
+                    "description": "原神，启动！",
+                    "url": "https://ys.mihoyo.com/main/"
+                },
+                {
+                    "name": "原神|外服",
+                    "icon": "/static/logo/mihoyo/genshin.webp",
+                    "description": "也可从外区Epic获取",
+                    "url": "https://genshin.hoyoverse.com/"
+                }
+            ]
+        },
+        {
+            "name": "对战平台",
+            "icon": "/static/icon/pvp.svg",
+            "sublist": [
+                {
+                    "name": "第三方运营的游戏对战平台",
                     "intro": true
                 }
             ]

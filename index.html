@@ -798,6 +798,9 @@
                     document.getElementById("searchBtn").addEventListener("click", () => {
                         Module.list.filter(document.getElementById("search").value);
                     });
+                    if (self != top) {
+                        document.getElementById("search").setAttribute("placeholder", "支持桌面版扩展的游戏会带有图标，点击即可添加/安装而非打开网页");
+                    }
                 },
                 render: () => {
                     document.querySelector(".side").innerHTML = "";
@@ -841,6 +844,7 @@
                         const list = document.createElement("a");
                         list.className = "listItem";
                         let tipIcons = "";
+                        item.desktop && self != top ? tipIcons += newTip("/static/icon/desktop.svg") : false;
                         list.innerHTML += item.icon ? `<img class="listItemIcon" src="${item.icon}">` : "";
                         list.innerHTML += `
                         <div class="listItemTextGroup">
