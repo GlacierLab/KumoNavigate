@@ -118,6 +118,12 @@
                     "icon": "/static/logo/dlsite.webp",
                     "description": "系统语言需为日语",
                     "url": "https://www.dlsite.com/soft/guide/dlnest"
+                },
+                {
+                    "name": "完美游戏平台",
+                    "icon": "/static/logo/wm.webp",
+                    "description": "高分屏适配也是屎",
+                    "url": "http://pgp.wanmei.com/"
                 }
             ]
         },
@@ -162,6 +168,16 @@
                     "icon": "/static/logo/mihoyo/genshin.webp",
                     "description": "也可从外区Epic获取",
                     "url": "https://genshin.hoyoverse.com/"
+                },
+                {
+                    "name": "Riot Games 拳头游戏",
+                    "divider": true
+                },
+                {
+                    "name": "无畏契约Valorant|外服",
+                    "icon": "/static/logo/riot/valorant.webp",
+                    "description": "也可从外区Epic获取，注册IP决定账号区域",
+                    "url": "https://playvalorant.com/"
                 }
             ]
         },
@@ -172,6 +188,12 @@
                 {
                     "name": "第三方运营的游戏对战平台",
                     "intro": true
+                },
+                {
+                    "name": "完美竞技平台",
+                    "icon": "/static/logo/wmdz.webp",
+                    "description": "美羊羊认证独此一家真的牛批",
+                    "url": "https://pvp.wanmei.com/"
                 }
             ]
         },
@@ -182,6 +204,14 @@
                 {
                     "name": "在浏览器内运行的游戏",
                     "intro": true
+                },
+                {
+                    "name": "小游戏网站",
+                    "divider": true
+                },
+                {
+                    "name": "多人在线页游",
+                    "divider": true
                 }
             ]
         },
@@ -200,8 +230,68 @@
             "icon": "/static/icon/key.svg",
             "sublist": [
                 {
-                    "name": "销售可在游戏平台激活的CDKEY的网站\n云酱仅提供正规网站的链接，请谨慎辨别网站内各商户的信誉！",
+                    "name": "销售可在游戏平台激活的CDKEY的网站",
                     "intro": true
+                },
+                {
+                    "name": "自营网站",
+                    "divider": true
+                },
+                {
+                    "name": "HumbleBundle",
+                    "icon": "/static/logo/humblebundle.webp",
+                    "description": "该站亦销售直接下载的DRM-Free游戏和电子书",
+                    "url": "https://www.humblebundle.com/"
+                },
+                {
+                    "name": "Fanatical",
+                    "icon": "/static/logo/fanatical.webp",
+                    "description": "由Fandom运营",
+                    "url": "https://www.fanatical.com/"
+                },
+                {
+                    "name": "杉果游戏",
+                    "icon": "/static/logo/sg.webp",
+                    "description": "销售国区KEY为主",
+                    "url": "https://www.sonkwo.cn/"
+                },
+                {
+                    "name": "Green Man Gaming",
+                    "icon": "/static/logo/gmg.svg",
+                    "description": "注意激活地区限制",
+                    "url": "https://www.greenmangaming.com/"
+                },
+                {
+                    "name": "CDKeys",
+                    "icon": "/static/logo/cdkeys.svg",
+                    "description": "注意激活地区限制",
+                    "url": "https://www.cdkeys.com/"
+                },
+                {
+                    "name": "三方交易",
+                    "divider": true
+                },
+                {
+                    "name": "此类网站只提供交易撮合，请谨慎辨别站内商户的信誉！",
+                    "intro": true
+                },
+                {
+                    "name": "Plati",
+                    "icon": "/static/logo/plati.png",
+                    "description": "该站亦销售游戏账号，注意区分",
+                    "url": "https://plati.market/"
+                },
+                {
+                    "name": "Kinguin",
+                    "icon": "/static/logo/kinguin.webp",
+                    "description": "该站亦销售游戏账号，注意区分",
+                    "url": "https://www.kinguin.net/"
+                },
+                {
+                    "name": "G2A",
+                    "icon": "/static/logo/g2a.webp",
+                    "description": "该站部分商家销售盗版软件，注意辨别",
+                    "url": "https://www.g2a.com/"
                 }
             ]
         },
@@ -212,16 +302,34 @@
                 {
                     "name": "为在线游戏充值的网站\n为防止低价代充诈骗，本站只提供官方认可的充值渠道",
                     "intro": true
+                },
+                {
+                    "name": "iGameBUY",
+                    "icon": "/static/logo/igamebuy.webp",
+                    "description": "部分外服游戏直充",
+                    "url": "https://www.igamebuy.com/"
                 }
             ]
         },
         {
-            "name": "主机销售",
+            "name": "主机商城",
             "icon": "/static/icon/console.svg",
             "sublist": [
                 {
                     "name": "在线购买主机游戏",
                     "intro": true
+                },
+                {
+                    "name": "PlayStation Store",
+                    "icon": "/static/logo/psstore.svg",
+                    "description": "地区与IP有关",
+                    "url": "https://store.playstation.com/"
+                },
+                {
+                    "name": "Xbox Games",
+                    "icon": "/static/logo/xbox.webp",
+                    "description": "其实也可以直接用微软商店",
+                    "url": "https://www.xbox.com/browse/games"
                 }
             ]
         },
