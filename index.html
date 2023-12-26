@@ -863,7 +863,7 @@
                     let filterList = [];
                     window.naviList.list.forEach((item, index) => {
                         item.sublist.forEach((item, index) => {
-                            if ((item.name.indexOf(text) != -1 || (item.description && item.description.indexOf(text) != -1)) && !item.divider && !item.intro) {
+                            if ((item.name.toUpperCase().indexOf(text.toUpperCase()) != -1 || (item.description && item.description.toUpperCase().indexOf(text.toUpperCase()) != -1)) && !item.divider && !item.intro) {
                                 filterList.push(item);
                             };
                         });
