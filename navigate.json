@@ -346,8 +346,92 @@
                     "divider": true
                 },
                 {
+                    "name": "SteamDB",
+                    "icon": "/static/logo/steamdb.svg",
+                    "description": "Steam平台的游戏数据",
+                    "url": "https://steamdb.info/"
+                },
+                {
+                    "name": "IsThereAnyDeal",
+                    "icon": "/static/logo/deal.svg",
+                    "description": "游戏比价",
+                    "url": "https://new.isthereanydeal.com/"
+                },
+                {
+                    "name": "GamerPower",
+                    "icon": "/static/logo/gamerpower.webp",
+                    "description": "游戏限免信息",
+                    "url": "https://www.gamerpower.com/"
+                },
+                {
+                    "name": "PCGamingWiki",
+                    "icon": "/static/logo/pcgamingwiki.webp",
+                    "description": "游戏运行疑难解答和优化技巧",
+                    "url": "https://www.pcgamingwiki.com/wiki/Home"
+                },
+                {
+                    "name": "ProtonDB",
+                    "icon": "/static/logo/protondb.svg",
+                    "description": "Proton游戏兼容性数据",
+                    "url": "https://www.protondb.com/"
+                },
+                {
+                    "name": "AppleGamingWiki",
+                    "icon": "/static/logo/applegamingwiki.webp",
+                    "description": "Apple Silicon芯片的游戏兼容性数据",
+                    "url": "https://www.applegamingwiki.com/wiki/Home"
+                },
+                {
+                    "name": "HowLongToBeat",
+                    "icon": "/static/logo/howlongtobeat.webp",
+                    "description": "需要多久来完成游戏？",
+                    "url": "https://howlongtobeat.com/"
+                },
+                {
+                    "name": "IGDB",
+                    "icon": "/static/logo/igdb.webp",
+                    "description": "Twitch运营的游戏数据库",
+                    "url": "https://www.igdb.com/"
+                },
+                {
+                    "name": "VNDB",
+                    "icon": "/static/logo/vndb.webp",
+                    "description": "视觉小说数据库",
+                    "url": "https://vndb.org/"
+                },
+                {
+                    "name": "CnGal",
+                    "icon": "/static/logo/cngal.webp",
+                    "description": "中文Galgame资料",
+                    "url": "https://www.cngal.org/"
+                },
+                {
+                    "name": "OP.GG",
+                    "icon": "/static/logo/opgg.webp",
+                    "description": "多种电竞游戏数据和资讯",
+                    "url": "https://www.op.gg/"
+                },
+                {
+                    "name": "EMUGEN Wiki",
+                    "icon": "/static/logo/emugen.png",
+                    "description": "模拟器信息",
+                    "url": "https://emulation.gametechwiki.com/index.php/Main_Page"
+                },
+                {
                     "name": "针对特定游戏内容的网站",
                     "divider": true
+                },
+                {
+                    "name": "星露谷物语官方维基",
+                    "icon": "/static/logo/stardewvalleywiki.png",
+                    "description": "",
+                    "url": "https://zh.stardewvalleywiki.com/"
+                },
+                {
+                    "name": "SimCity BuildIt Wiki",
+                    "icon": "/static/logo/buildit.webp",
+                    "description": "",
+                    "url": "https://simcity-buildit.fandom.com/wiki/SimCity_BuildIt_Wiki"
                 },
                 {
                     "name": "游戏评测与资讯",
