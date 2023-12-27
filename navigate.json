@@ -458,6 +458,54 @@
                 {
                     "name": "在PC上运行其他设备或系统游戏所使用的软件\n本站不提供游戏资源，请自行通过合法途径下载游戏资源",
                     "intro": true
+                },
+                {
+                    "name": "RPCS3",
+                    "icon": "/static/logo/rpcs3.webp",
+                    "description": "PS3|GPL-2.0",
+                    "url": "https://rpcs3.net/"
+                },
+                {
+                    "name": "Vita3K",
+                    "icon": "/static/logo/vita3k.svg",
+                    "description": "PSV|GPL-2.0",
+                    "url": "https://vita3k.org/"
+                },
+                {
+                    "name": "yuzu",
+                    "icon": "/static/logo/yuzu.svg",
+                    "description": "NS|GPL-3.0",
+                    "url": "https://yuzu-emu.org/"
+                },
+                {
+                    "name": "Ryujinx",
+                    "icon": "/static/logo/ryujinx.webp",
+                    "description": "NS|MIT",
+                    "url": "https://ryujinx.org/"
+                },
+                {
+                    "name": "PCSX4",
+                    "icon": "/static/logo/pcsx4.svg",
+                    "description": "PS4|部分开源Apache 2.0",
+                    "url": "https://pcsx4.com/"
+                },
+                {
+                    "name": "RetroArch",
+                    "icon": "/static/logo/retroarch.svg",
+                    "description": "多平台聚合|GPL-3.0",
+                    "url": "https://www.retroarch.com/"
+                },
+                {
+                    "name": "TeknoParrot",
+                    "icon": "/static/logo/teknoparrot.webp",
+                    "description": "街机|GPL-3.0",
+                    "url": "https://teknogods.github.io/index.html"
+                },
+                {
+                    "name": "Android子系统(WSA)",
+                    "icon": "/static/logo/wsa.webp",
+                    "description": "Android|闭源",
+                    "url": "https://www.microsoft.com/store/productId/9P3395VX91NR"
                 }
             ]
         },
