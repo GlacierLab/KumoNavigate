@@ -436,6 +436,18 @@
                 {
                     "name": "游戏评测与资讯",
                     "divider": true
+                },
+                {
+                    "name": "metacritic",
+                    "icon": "/static/logo/metacritic.svg",
+                    "description": "综合性评分站",
+                    "url": "https://www.metacritic.com/game"
+                },
+                {
+                    "name": "IGN",
+                    "icon": "/static/logo/ign.svg",
+                    "description": "长评和资讯",
+                    "url": "https://www.ign.com/"
                 }
             ]
         },
