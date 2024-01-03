@@ -522,8 +522,51 @@
                     "divider": true
                 },
                 {
+                    "name": "前往GlacierLab",
+                    "icon": "/static/icon/external.svg",
+                    "description": "由琴梨梨建立的专注游戏优化的开源组织",
+                    "url": "https://glacier.qinlili.bid"
+                },
+                {
+                    "name": "Low Specs Experience",
+                    "description": "为低配设备优化游戏设置",
+                    "url": "https://ragnos1997.com/low-specs-experience-download/"
+                },
+                {
+                    "name": "Special K",
+                    "icon": "/static/logo/sk.svg",
+                    "description": "需要注入游戏，请勿用于在线游戏",
+                    "url": "https://discourse.differentk.fyi/"
+                },
+                {
                     "name": "图形API翻译",
                     "divider": true
+                },
+                {
+                    "name": "dxvk",
+                    "description": "DirectX9-11转Vulkan|Zlib license",
+                    "url": "https://github.com/doitsujin/dxvk"
+                },
+                {
+                    "name": "dgVoodoo2",
+                    "icon": "/static/logo/dgvoodoo.webp",
+                    "description": "Glide/DX1-9转DX11/12|闭源",
+                    "url": "http://dege.freeweb.hu/dgVoodoo2/"
+                },
+                {
+                    "name": "vkd3d",
+                    "description": "DirectX12转Vulkan|LGPL-2.1",
+                    "url": "https://github.com/HansKristian-Work/vkd3d-proton"
+                },
+                {
+                    "name": "WineD3D",
+                    "description": "DirectX1-11转OpenGL/Vulkan|LGPL-2.1",
+                    "url": "https://fdossena.com/?p=wined3d/index.frag"
+                },
+                {
+                    "name": "mesa-dist",
+                    "description": "OpenGL转DirectX/Vulkan/软渲染|MIT",
+                    "url": "https://github.com/pal1000/mesa-dist-win/"
                 },
                 {
                     "name": "游戏管理",
@@ -535,6 +578,10 @@
                 },
                 {
                     "name": "网络优化",
+                    "divider": true
+                },
+                {
+                    "name": "解包工具",
                     "divider": true
                 }
             ]
