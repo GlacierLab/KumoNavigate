@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20231225",
+    "version": "20240105",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -665,6 +665,12 @@
                     "name": "apitrace",
                     "description": "追踪API调用",
                     "url": "https://github.com/apitrace/apitrace"
+                },
+                {
+                    "name": "x64dbg",
+                    "icon": "/static/logo/x64dbg.webp",
+                    "description": "反汇编调试",
+                    "url": "https://x64dbg.com/"
                 }
             ]
         },
@@ -675,6 +681,24 @@
                 {
                     "name": "设备驱动下载",
                     "intro": true
+                },
+                {
+                    "name": "NVIDIA驱动",
+                    "icon": "/static/logo/nvidia.svg",
+                    "description": "注意区分游戏和专业驱动",
+                    "url": "https://www.nvidia.com/Download/index.aspx"
+                },
+                {
+                    "name": "Intel驱动",
+                    "icon": "/static/logo/intel.webp",
+                    "description": "Windows更新会自动降级记得屏蔽",
+                    "url": "https://www.intel.cn/content/www/cn/zh/download-center/home.html"
+                },
+                {
+                    "name": "AMD驱动",
+                    "icon": "/static/logo/amd.svg",
+                    "description": "Windows更新会自动降级记得屏蔽",
+                    "url": "https://www.amd.com/zh-hans/support"
                 }
             ]
         }
