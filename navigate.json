@@ -573,12 +573,29 @@
                     "divider": true
                 },
                 {
+                    "name": "Playnite",
+                    "icon": "/static/logo/playnite.webp",
+                    "description": "游戏集合管理|MIT",
+                    "url": "https://playnite.link/"
+                },
+                {
                     "name": "硬件监控",
                     "divider": true
                 },
                 {
+                    "name": "MSI Afterburner",
+                    "icon": "/static/logo/afterburner.webp",
+                    "description": "显卡超频和监控",
+                    "url": "https://www.msi.com/Landing/afterburner/graphics-cards"
+                },
+                {
                     "name": "网络优化",
                     "divider": true
+                },
+                {
+                    "name": "UsbEAm Hosts Editor",
+                    "description": "改善连接和下载速度",
+                    "url": "https://www.dogfight360.com/blog/475"
                 },
                 {
                     "name": "解包工具",
@@ -597,6 +614,57 @@
                 {
                     "name": "游戏引擎",
                     "divider": true
+                },
+                {
+                    "name": "Unity3D",
+                    "icon": "/static/logo/unity.svg",
+                    "description": "中国大陆IP会下到广告特供版",
+                    "url": "https://unity.com/"
+                },
+                {
+                    "name": "Unreal Engine",
+                    "icon": "/static/logo/unreal.webp",
+                    "description": "从Epic Games下载更方便",
+                    "url": "https://www.unrealengine.com/"
+                },
+                {
+                    "name": "CryEngine",
+                    "icon": "/static/logo/cryengine.svg",
+                    "description": "",
+                    "url": "https://www.cryengine.com/"
+                },
+                {
+                    "name": "Cocos Engine",
+                    "icon": "/static/logo/cocos.webp",
+                    "description": "",
+                    "url": "https://www.cocos.com/"
+                },
+                {
+                    "name": "Construct 3",
+                    "icon": "/static/logo/construct.webp",
+                    "description": "",
+                    "url": "https://www.construct.net/"
+                },
+                {
+                    "name": "Godot Engine",
+                    "icon": "/static/logo/godot.svg",
+                    "description": "",
+                    "url": "https://godotengine.org/"
+                },
+                {
+                    "name": "调试工具",
+                    "divider": true
+                },
+                {
+                    "name": "NVIDIA Nsight",
+                    "icon": "/static/logo/nsight.webp",
+                    "description": "性能分析",
+                    "url": "https://developer.nvidia.com/nsight-systems"
+                },
+                {
+                    "name": "apitrace",
+                    "description": "追踪API调用",
+                    "url": "https://github.com/apitrace/apitrace"
                 }
             ]
         },
