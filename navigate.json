@@ -3,8 +3,11 @@
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
-            "info": "云酱桌面版正在开发中，别急！",
-            "url": ""
+            "info": "云酱桌面版正在开发中，别急！"
+        },
+        {
+            "icon": "/static/icon/group.svg",
+            "info": "云酱官方群616107007欢迎加入"
         }
     ],
     "list": [

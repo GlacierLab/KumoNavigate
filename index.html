@@ -454,6 +454,12 @@
             }
         }
 
+        H1 {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
         @media (max-width:200px) {
             .listItemTextGroup {
                 display: none;
@@ -559,11 +565,11 @@
 <body>
     <div class="top">
         <div class="title" style="height:40px;justify-content: space-between;">
-            <div class="title">
-                <img style="width:40px;height:40px;padding:4px;" src="icon.png">
-                <H1 style="margin:5px;line-height:30px;font-size:1.75em;font-weight: 500;">云酱游戏导航</H1>
+            <div class="title" style="flex-shrink: 1;min-width: 40px;">
+                <img id="logo" style="width:40px;height:40px;padding:4px;" src="icon.png">
+                <H1 id="title" style="margin:5px;line-height:30px;font-size:1.75em;font-weight: 500;">云酱游戏导航</H1>
             </div>
-            <div class="title">
+            <div class="title" style="flex-shrink: 0;">
                 <div class="titleBtn">
                     <img src="/static/icon/desktop.svg">
                     <H3>桌面版</H2>
@@ -630,6 +636,36 @@
                     Module.netTick.tick++;
                 }
             },
+            logoclick: {
+                init: () => {
+                    let click = 0;
+                    document.getElementById("logo").addEventListener("click", () => {
+                        click++;
+                        if (click >= 5) {
+                            function getVideoCardInfo() {
+                                const gl = document.createElement('canvas').getContext('webgl');
+                                if (!gl) {
+                                    return false;
+                                }
+                                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+                                return debugInfo ? {
+                                    vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
+                                    renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
+                                } : false;
+                            }
+                            let GPUinfo = getVideoCardInfo();
+                            if (GPUinfo) {
+                                let GPUname = GPUinfo.renderer;
+                                if (GPUinfo.renderer.indexOf("ANGLE") == 0) {
+                                    GPUname = GPUname.substring(GPUname.indexOf(",") + 2, GPUname.indexOf("Direct3D") - 1);
+                                }
+                                document.getElementById("logo").src = "/static/icon/gpu.webp";
+                                document.getElementById("title").innerText = GPUname;
+                            }
+                        }
+                    });
+                }
+            },
             logger: {
                 collect: (error) => {
                     console.warn(error.message);
@@ -691,8 +727,11 @@
             naviUpdater: {
                 init: async () => {
                     if ((Module.pref.get("lastNaviUpdate") == new Date().toLocaleDateString()) && localStorage.naviCache) { } else {
-                        Module.naviUpdater.update();
+                        await Module.naviUpdater.update();
                     };
+                    window.naviList = await Module.naviUpdater.getData();
+                    Module.top.render();
+                    Module.list.render();
                 },
                 getData: async () => {
                     if (!localStorage.naviCache) {
@@ -731,8 +770,13 @@
                     const topInfo = naviList.top[random(0, naviList.top.length - 1)];
                     document.getElementById("notiIcon").src = topInfo.icon;
                     document.getElementById("notiText").innerText = topInfo.info;
-                    document.getElementById("noti").onclick = () => {
-                        link(topInfo.url, topInfo.url.startsWith("http"));
+                    if (topInfo.url) {
+                        document.getElementById("noti").onclick = () => {
+                            link(topInfo.url, topInfo.url.startsWith("http"));
+                        }
+                    }
+                    if (naviList.top.length > 1) {
+                        setTimeout(Module.top.render, 60000);
                     }
                 }
             },
@@ -814,14 +858,19 @@
                     Module.list.renderSublist(filterList);
                     document.querySelector(".sideItem[active]") ? document.querySelector(".sideItem[active]").removeAttribute("active") : false;
                 }
+            },
+            pwa: {
+                init: async () => {
+                    if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
+                        await navigator.serviceWorker.register('/sw.js');
+                    }
+                }
+
             }
         };
         //初始化
         (async () => {
-            Module.autoinit.run();
-            window.naviList = await Module.naviUpdater.getData();
-            Module.top.render();
-            Module.list.render();
+            await Module.autoinit.run();
         })();
     </script>
 </body>
