@@ -207,58 +207,6 @@
             top: 0px;
         }
 
-        .settingFloat {
-            display: none;
-            opacity: 0;
-            z-index: 10;
-            top: 0px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: 8px;
-            padding: 8px;
-            background-color: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(5px) brightness(90%);
-            -webkit-backdrop-filter: blur(5px) brightness(90%);
-            box-shadow: 2px 2px 4px #dfaeff;
-            border-radius: 4px;
-            transition: all 0.25s;
-            flex-direction: column;
-        }
-
-        .settingFloat.show {
-            top: 32px;
-            opacity: 1;
-        }
-
-        #settingsBox {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 100%;
-        }
-
-        .settingItem {
-            margin-top: 6px;
-            margin-bottom: 6px;
-            padding: 2px;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .settingItemTitle {
-            font-size: 0.9em;
-            line-height: 20px;
-        }
-
-        .settingItemSwitchInput {
-            height: 20px;
-            width: 24px;
-        }
-
         .title {
             display: flex;
             flex-direction: row;
@@ -589,17 +537,6 @@
         <div class="side"></div>
         <div class="list"></div>
     </div>
-    <div class="settingFloat" id="settingFloat">
-        <div id="settingsBox"></div>
-        <div style="display: flex;width:100%;justify-content: space-between;">
-            <span style="font-size: 0.8em;line-height: 20px;" class="clickIcon"
-                onclick="Module.naviUpdater.updateAndRender(this);">强制更新</span>
-            <div>
-                <img class="clickIcon" id="hidesettingBtn" src="/static/icon/close.svg"
-                    onclick="Module.settings.hide();">
-            </div>
-        </div>
-    </div>
     <script>
         const sleep = delay => new Promise((resolve) => setTimeout(resolve, delay));
         const random = (min, max) => {
@@ -805,39 +742,6 @@
                     console.warn(error.message);
                 }
             },
-            settings: {
-                init: () => {
-                },
-                list: [],
-                show: async () => {
-                    document.getElementById("settingFloat").style.display = "flex";
-                    await sleep(1);
-                    document.getElementById("settingFloat").className = "settingFloat show";
-                    document.getElementById("settingsBox").innerHTML = "";
-                    Module.settings.list.forEach(item => {
-                        let settingItem = document.createElement("div");
-                        settingItem.className = "settingItem";
-                        let settingItemTitle = document.createElement("span");
-                        settingItemTitle.className = "settingItemTitle";
-                        settingItemTitle.innerText = item.title;
-                        settingItem.appendChild(settingItemTitle);
-                        let settingItemSwitchInput = document.createElement("input");
-                        settingItemSwitchInput.type = "checkbox";
-                        settingItemSwitchInput.className = "settingItemSwitchInput";
-                        settingItemSwitchInput.checked = Module.pref.get(item.key);
-                        settingItemSwitchInput.addEventListener("change", () => {
-                            Module.pref.set(item.key, settingItemSwitchInput.checked);
-                        });
-                        settingItem.appendChild(settingItemSwitchInput);
-                        document.getElementById("settingsBox").appendChild(settingItem);
-                    });
-                },
-                hide: async () => {
-                    document.getElementById("settingFloat").className = "settingFloat";
-                    await sleep(250);
-                    document.getElementById("settingFloat").style.display = "none";
-                }
-            },
             pref: {
                 init: () => {
                     if (localStorage.pref) {
@@ -856,6 +760,17 @@
                 set: (key, value) => {
                     Module.pref.data[key] = value;
                     Module.pref.sync();
+                }
+            },
+            //桌面版同步
+            desktopSync: {
+                init: () => {
+                    if (self != top) {
+                        window.addEventListener("message", async (event) => {
+                            console.log(event.data);
+                        }, false);
+                        window.parent.postMessage("GET-", "*");
+                    }
                 }
             },
             naviUpdater: {
@@ -926,7 +841,6 @@
                 render: () => {
                     document.querySelector(".side").innerHTML = "";
                     window.naviList.list.forEach((item, index) => {
-                        if ((Module.pref.get("hideCircle") && item.name == "环塔圈")) return;
                         const side = document.createElement("div");
                         side.className = "sideItem";
                         side.innerHTML = `
@@ -975,8 +889,13 @@
                         `;
                         list.href = item.url;
                         item.url.startsWith("http") ? list.target = "_blank" : false;
-                        list.oncontextmenu = (e) => {
-                        };
+                        if (self != top && item.desktop) {
+                            list.addEventListener("click", event => {
+                                event.preventDefault();
+                                event.stopPropagation();
+                                window.parent.postMessage("ADD-" + item.desktop, "*");
+                            });
+                        }
                         document.querySelector(".list").appendChild(list);
                     });
                 },
