@@ -775,12 +775,12 @@
             },
             naviUpdater: {
                 init: async () => {
-                    if ((Module.pref.get("lastNaviUpdate") == new Date().toLocaleDateString()) && localStorage.naviCache) { } else {
-                        await Module.naviUpdater.update();
-                    };
                     window.naviList = await Module.naviUpdater.getData();
                     Module.top.render();
                     Module.list.render();
+                    if ((Module.pref.get("lastNaviUpdate") == new Date().toLocaleDateString()) && localStorage.naviCache) { } else {
+                        await Module.naviUpdater.update();
+                    };
                 },
                 getData: async () => {
                     if (!localStorage.naviCache) {

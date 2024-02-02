@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240105",
+    "version": "20240203",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -127,6 +127,18 @@
                     "icon": "/static/logo/wm.webp",
                     "description": "高分屏适配也是屎",
                     "url": "http://pgp.wanmei.com/"
+                },
+                {
+                    "name": "Legacy Games",
+                    "icon": "/static/logo/legacygames.webp",
+                    "description": "客户端运行需要管理员权限",
+                    "url": "https://legacygames.com/"
+                },
+                {
+                    "name": "Big Fish",
+                    "icon": "/static/logo/bigfish.webp",
+                    "description": "UI有一种上世纪的美",
+                    "url": "https://www.bigfishgames.com/"
                 }
             ]
         },
@@ -155,6 +167,12 @@
                 {
                     "name": "腾讯游戏下载大部分都会捆绑WeGame，建议直接下载WeGame",
                     "intro": true
+                },
+                {
+                    "name": "QQ游戏大厅",
+                    "icon": "/static/logo/tencent/qq.webp",
+                    "description": "给阿姨倒一杯卡布奇诺",
+                    "url": "https://qqgame.qq.com/"
                 },
                 {
                     "name": "米哈游",
