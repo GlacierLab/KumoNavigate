@@ -5,15 +5,23 @@ var URLS = []
 
 // Respond with cached resources
 self.addEventListener('fetch', function (event) {
-    console.log('fetch request : ' + event.request.url)
-    if (event.request.method == "GET" && (event.request.url.indexOf("http") == 0) && (event.request.url.indexOf("doubleclick") == -1) && (event.request.url.indexOf("google") == -1)) {
+    if (event.request.url.indexOf("getVersionWorker") > 0) {
+        event.respondWith(new Response(VERSION));
+        return;
+    }
+    const getCacheName = url => {
+        if (url.indexOf("/static/") > 0 && url.split("/").length >= 6) {
+            return "StaticCache"
+        };
+        return CACHE_NAME;
+    }
+
+    if (event.request.method == "GET" && (event.request.url.indexOf("http") == 0) && (event.request.url.indexOf("ForceNoCache") == -1) && (event.request.url.indexOf("doubleclick") == -1) && (event.request.url.indexOf("google") == -1)) {
         event.respondWith(
-            caches.open(CACHE_NAME).then(function (cache) {
+            caches.open(getCacheName(event.request.url)).then(function (cache) {
                 return cache.match(event.request).then(function (response) {
                     return response || fetch(event.request).then(function (response) {
-                        console.log('file is not cached, fetching : ' + event.request.url)
                         cache.put(event.request, response.clone());
-                        console.log('file cached : ' + event.request.url)
                         return response;
                     });
                 });
@@ -45,6 +53,7 @@ self.addEventListener('activate', function (e) {
             })
             // add current cache name to white list
             cacheWhitelist.push(CACHE_NAME)
+            cacheWhitelist.push("StaticCache")
 
             return Promise.all(keyList.map(function (key, i) {
                 if (cacheWhitelist.indexOf(key) === -1) {

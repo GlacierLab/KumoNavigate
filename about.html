@@ -78,7 +78,13 @@
     <div id="settings" style="height:100vh;overflow-y:scroll;">
         <img alt="云酱游戏导航" src="./icon.png" style="margin-top:10vh;width:25vw;max-width:160px;border-radius: 20px ;">
         <H2>云酱游戏导航</H2>
-        <H4 id="update" style="padding:10px;">版本： 2.3.0</H4>
+        <H4 id="update" style="padding:10px;"></H4>
+        <script>
+            (async () => {
+                let currentVersion = await (await fetch("getVersionWorker")).text();
+                document.getElementById("update").innerText = "版本：" + currentVersion;
+            })()
+        </script>
         <H5>开发：<a href="https://qinlili.bid" target="_blank">Glacier Lab - 琴梨梨</a></H5>
         <br>
         <button onclick="window.open('https://github.com/GlacierLab/KumoNavigate/', '_blank');">
