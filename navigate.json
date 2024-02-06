@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240203",
+    "version": "20240206",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -199,6 +199,22 @@
                     "icon": "/static/logo/riot/valorant.webp",
                     "description": "也可从外区Epic获取，注册IP决定账号区域",
                     "url": "https://playvalorant.com/"
+                },
+                {
+                    "name": "音游类",
+                    "divider": true
+                },
+                {
+                    "name": "osu!",
+                    "icon": "/static/logo/osu.webp",
+                    "description": "建议使用新的lazer",
+                    "url": "https://osu.ppy.sh/home"
+                },
+                {
+                    "name": "SOUND VOLTEX 家用版",
+                    "icon": "/static/logo/sdvx.webp",
+                    "description": "需按月付费，可使用键盘",
+                    "url": "https://p.eagate.573.jp/game/eacsdvx/vi/index.html"
                 }
             ]
         },
@@ -505,10 +521,10 @@
                     "url": "https://ryujinx.org/"
                 },
                 {
-                    "name": "PCSX4",
-                    "icon": "/static/logo/pcsx4.svg",
-                    "description": "PS4|部分开源Apache 2.0",
-                    "url": "https://pcsx4.com/"
+                    "name": "Citra",
+                    "icon": "/static/logo/citra.svg",
+                    "description": "3DS|GPL-2.0",
+                    "url": "https://citra-emu.org/"
                 },
                 {
                     "name": "RetroArch",
@@ -590,6 +606,11 @@
                     "url": "https://github.com/pal1000/mesa-dist-win/"
                 },
                 {
+                    "name": "微软OpenCL,OpenGL,Vulkan兼容包",
+                    "description": "OpenGL/OpenCL/Vulkan转DX12|闭源",
+                    "url": "https://apps.microsoft.com/detail/9NQPSL29BFFF"
+                },
+                {
                     "name": "游戏管理",
                     "divider": true
                 },
@@ -610,6 +631,12 @@
                     "url": "https://www.msi.com/Landing/afterburner/graphics-cards"
                 },
                 {
+                    "name": "EVGA Precision X1",
+                    "icon": "/static/logo/evgax1.webp",
+                    "description": "显卡超频，也可从Steam获取",
+                    "url": "https://www.evga.com/precisionx1/"
+                },
+                {
                     "name": "网络优化",
                     "divider": true
                 },
@@ -621,6 +648,16 @@
                 {
                     "name": "解包工具",
                     "divider": true
+                },
+                {
+                    "name": "GARbro",
+                    "description": "解包各类视觉小说",
+                    "url": "https://github.com/morkt/GARbro"
+                },
+                {
+                    "name": "AssetRipper",
+                    "description": "解包Unity资源",
+                    "url": "https://github.com/AssetRipper/AssetRipper"
                 }
             ]
         },
