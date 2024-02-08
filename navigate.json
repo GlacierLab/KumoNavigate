@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240206",
+    "version": "20240208",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -16,8 +16,12 @@
             "icon": "/static/icon/store.svg",
             "sublist": [
                 {
-                    "name": "一站式安装和管理游戏的软件",
+                    "name": "一站式获取大量游戏的平台",
                     "intro": true
+                },
+                {
+                    "name": "提供客户端的平台",
+                    "divider": true
                 },
                 {
                     "name": "Steam",
@@ -139,6 +143,22 @@
                     "icon": "/static/logo/bigfish.webp",
                     "description": "UI有一种上世纪的美",
                     "url": "https://www.bigfishgames.com/"
+                },
+                {
+                    "name": "百田游戏管家",
+                    "icon": "/static/logo/bt100.webp",
+                    "description": "支持Linux是好文明",
+                    "url": "https://guanjia.100bt.com/"
+                },
+                {
+                    "name": "无客户端的平台",
+                    "divider": true
+                },
+                {
+                    "name": "ZOOM Platform",
+                    "icon": "/static/logo/zoom.svg",
+                    "description": "DRM-Free的游戏平台",
+                    "url": "https://www.zoom-platform.com/"
                 }
             ]
         },
@@ -243,8 +263,14 @@
                     "intro": true
                 },
                 {
-                    "name": "小游戏网站",
+                    "name": "小游戏",
                     "divider": true
+                },
+                {
+                    "name": "吃掉小猫猫",
+                    "icon": "/static/logo/eatcat.webp",
+                    "description": "底力练习",
+                    "url": "https://eafoo.github.io/eatcat/"
                 },
                 {
                     "name": "多人在线页游",
@@ -259,6 +285,24 @@
                 {
                     "name": "基于远程渲染的游戏体验",
                     "intro": true
+                },
+                {
+                    "name": "Amazon Luna",
+                    "icon": "/static/logo/luna.webp",
+                    "description": "Prime会员的一部分，锁区",
+                    "url": "https://luna.amazon.com/"
+                },
+                {
+                    "name": "CLOUDGG",
+                    "icon": "/static/logo/cloudgg.webp",
+                    "description": "GeForce NOW澳洲版",
+                    "url": "https://cloud.gg/"
+                },
+                {
+                    "name": "Xbox云游戏",
+                    "icon": "/static/logo/xbox.webp",
+                    "description": "包含在XGP内",
+                    "url": "https://www.xbox.com/play"
                 }
             ]
         },
@@ -485,6 +529,22 @@
                     "icon": "/static/logo/ign.svg",
                     "description": "长评和资讯",
                     "url": "https://www.ign.com/"
+                }
+            ]
+        },
+        {
+            "name": "游戏模组",
+            "icon": "/static/icon/mod.svg",
+            "sublist": [
+                {
+                    "name": "附加于游戏本体上的社区自制内容",
+                    "intro": true
+                },
+                {
+                    "name": "Nexus Mods",
+                    "icon": "/static/logo/nexusmods.svg",
+                    "description": "最大的模组网站之一",
+                    "url": "https://www.nexusmods.com/"
                 }
             ]
         },
