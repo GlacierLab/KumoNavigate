@@ -508,16 +508,16 @@
     <div class="top">
         <div class="title" style="height:40px;justify-content: space-between;">
             <div class="title" style="flex-shrink: 1;min-width: 40px;">
-                <img id="logo" style="width:40px;height:40px;padding:4px;" src="icon.png">
+                <img id="logo" style="width:40px;height:40px;padding:4px;" src="icon.png" alt="云酱游戏导航">
                 <H1 id="title" style="margin:5px;line-height:30px;font-size:1.75em;font-weight: 500;">云酱游戏导航</H1>
             </div>
             <div class="title" style="flex-shrink: 0;">
                 <div class="titleBtn" style="display:none;">
-                    <img src="/static/icon/desktop.svg">
+                    <img src="/static/icon/desktop.svg" alt="桌面版">
                     <H3>桌面版</H2>
                 </div>
                 <div class="titleBtn" onclick="Module.yuni.showFrame('/about.html')">
-                    <img src="/static/icon/info.svg">
+                    <img src="/static/icon/info.svg" alt="关于">
                     <H3>关于</H2>
                 </div>
             </div>
@@ -525,7 +525,7 @@
         <div class="navi">
             <div class="search" style="display:flex;">
                 <input role="textbox" id="search" name="搜索" placeholder="搜索">
-                <img class="clickIcon" id="searchBtn" src="/static/icon/search.svg">
+                <img class="clickIcon" id="searchBtn" src="/static/icon/search.svg" alt="搜索">
             </div>
         </div>
         <div id="noti">
@@ -591,6 +591,7 @@
                                     GPUname = GPUname.substring(GPUname.indexOf(",") + 2, GPUname.indexOf("Direct3D") - 1);
                                 }
                                 document.getElementById("logo").src = "/static/icon/gpu.webp";
+                                document.getElementById("logo").alt = "显卡信息";
                                 document.getElementById("title").innerText = GPUname;
                             }
                         }
@@ -818,6 +819,7 @@
                     //顶栏
                     const topInfo = naviList.top[random(0, naviList.top.length - 1)];
                     document.getElementById("notiIcon").src = topInfo.icon;
+                    document.getElementById("notiIcon").alt = topInfo.info;
                     document.getElementById("notiText").innerText = topInfo.info;
                     if (topInfo.url) {
                         document.getElementById("noti").onclick = () => {
@@ -844,7 +846,7 @@
                         const side = document.createElement("div");
                         side.className = "sideItem";
                         side.innerHTML = `
-                        <img class="sideItemIcon" src="${item.icon}">
+                        <img class="sideItemIcon" src="${item.icon}" alt="${item.name}">
                         <span class="sideItemTitle">${item.name}</span>
                         `;
                         side.onclick = () => {
@@ -880,7 +882,7 @@
                         list.className = "listItem";
                         let tipIcons = "";
                         item.desktop && self != top ? tipIcons += newTip("/static/icon/desktop.svg") : false;
-                        list.innerHTML += item.icon ? `<img class="listItemIcon" src="${item.icon}">` : "";
+                        list.innerHTML += item.icon ? `<img class="listItemIcon" src="${item.icon}" alt="${item.name}">` : "";
                         list.innerHTML += `
                         <div class="listItemTextGroup">
                             <span class="listItemTitle">${item.name}${tipIcons}</span>
