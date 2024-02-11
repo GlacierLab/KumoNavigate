@@ -82,7 +82,8 @@
         <script>
             (async () => {
                 let currentVersion = await (await fetch("getVersionWorker")).text();
-                document.getElementById("update").innerText = "版本：" + currentVersion;
+                let navVersion = JSON.parse(localStorage.naviCache).version;
+                document.getElementById("update").innerText = "版本：" + currentVersion + "\n导航数据：" + navVersion;
             })()
         </script>
         <H5>开发：<a href="https://qinlili.bid" target="_blank">Glacier Lab - 琴梨梨</a></H5>
@@ -90,6 +91,8 @@
         <button onclick="window.open('https://github.com/GlacierLab/KumoNavigate/', '_blank');">
             查看源码</button>
         <br>
+        <button onclick="window.open('https://github.com/GlacierLab/KumoNavigate/issues/new', '_blank');">
+            反馈</button>
         <br>
         <H6>云酱图标来自<a href="https://www.flaticon.com/free-icons/video-game" title="video game icons">Freepik -
                 Flaticon</a></H6>
