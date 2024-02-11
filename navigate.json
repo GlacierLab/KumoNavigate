@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240208",
+    "version": "202402011",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -211,6 +211,30 @@
                     "url": "https://genshin.hoyoverse.com/"
                 },
                 {
+                    "name": "崩坏星穹铁道|国服",
+                    "icon": "/static/logo/mihoyo/starrail.webp",
+                    "description": "",
+                    "url": "https://sr.mihoyo.com/"
+                },
+                {
+                    "name": "崩坏星穹铁道|外服",
+                    "icon": "/static/logo/mihoyo/starrail.webp",
+                    "description": "也可从外区Epic获取",
+                    "url": "https://hsr.hoyoverse.com/"
+                },
+                {
+                    "name": "崩坏3|国服",
+                    "icon": "/static/logo/mihoyo/honkai3.webp",
+                    "description": "",
+                    "url": "https://bh3.mihoyo.com/"
+                },
+                {
+                    "name": "崩坏3|外服",
+                    "icon": "/static/logo/mihoyo/honkai3.webp",
+                    "description": "也可从Steam/Epic获取",
+                    "url": "https://honkaiimpact3.hoyoverse.com/"
+                },
+                {
                     "name": "Riot Games 拳头游戏",
                     "divider": true
                 },
@@ -219,6 +243,12 @@
                     "icon": "/static/logo/riot/valorant.webp",
                     "description": "也可从外区Epic获取，注册IP决定账号区域",
                     "url": "https://playvalorant.com/"
+                },
+                {
+                    "name": "英雄联盟|外服",
+                    "icon": "/static/logo/riot/lol.webp",
+                    "description": "右上角选择语言和区服",
+                    "url": "https://www.leagueoflegends.com/"
                 },
                 {
                     "name": "音游类",
@@ -251,6 +281,18 @@
                     "icon": "/static/logo/wmdz.webp",
                     "description": "美羊羊认证独此一家真的牛批",
                     "url": "https://pvp.wanmei.com/"
+                },
+                {
+                    "name": "5E对战平台",
+                    "icon": "/static/logo/5e.webp",
+                    "description": "对战？对转！",
+                    "url": "https://arena.5eplay.com/download"
+                },
+                {
+                    "name": "FACEIT",
+                    "icon": "/static/logo/faceit.webp",
+                    "description": "",
+                    "url": "https://www.faceit.com/"
                 }
             ]
         },
@@ -275,6 +317,12 @@
                 {
                     "name": "多人在线页游",
                     "divider": true
+                },
+                {
+                    "name": "三国杀",
+                    "icon": "/static/logo/sgs.webp",
+                    "description": "差评如潮",
+                    "url": "https://web.sanguosha.com/"
                 }
             ]
         },
@@ -543,8 +591,14 @@
                 {
                     "name": "Nexus Mods",
                     "icon": "/static/logo/nexusmods.svg",
-                    "description": "最大的模组网站之一",
+                    "description": "",
                     "url": "https://www.nexusmods.com/"
+                },
+                {
+                    "name": "ModDB",
+                    "icon": "/static/logo/moddb.webp",
+                    "description": "",
+                    "url": "https://www.moddb.com/"
                 }
             ]
         },
@@ -599,10 +653,60 @@
                     "url": "https://teknogods.github.io/index.html"
                 },
                 {
+                    "name": "Dolphin",
+                    "icon": "/static/logo/dolphin.webp",
+                    "description": "GameCube/Wii|GPL-2.0",
+                    "url": "https://dolphin-emu.org/"
+                },
+                {
+                    "name": "DeSmuME",
+                    "icon": "/static/logo/desmume.webp",
+                    "description": "NDS|GPL-2.0",
+                    "url": "https://desmume.org/"
+                },
+                {
+                    "name": "melonDS",
+                    "icon": "/static/logo/melonds.webp",
+                    "description": "NDS|GPL-3.0",
+                    "url": "https://melonds.kuribo64.net/"
+                },
+                {
+                    "name": "ScummVM",
+                    "icon": "/static/logo/scumm.webp",
+                    "description": "SCUMM|GPL-3.0",
+                    "url": "https://scummvm.org/"
+                },
+                {
+                    "name": "DOSBox",
+                    "icon": "/static/logo/dosbox.webp",
+                    "description": "DOS|GPL-2.0",
+                    "url": "https://www.dosbox.com/"
+                },
+                {
                     "name": "Android子系统(WSA)",
                     "icon": "/static/logo/wsa.webp",
                     "description": "Android|闭源",
                     "url": "https://www.microsoft.com/store/productId/9P3395VX91NR"
+                },
+                {
+                    "name": "虚拟机",
+                    "divider": true
+                },
+                {
+                    "name": "虚拟机针对完整系统，更注重仿真度，性能往往不如针对特定游戏的模拟器",
+                    "intro": true
+                },
+                {
+                    "name": "VirtualBox",
+                    "icon": "/static/logo/virtualbox.svg",
+                    "description": "同架构|GPL-2.0",
+                    "url": "https://www.virtualbox.org/"
+                },
+                {
+                    "name": "QEMU",
+                    "icon": "/static/logo/qemu.svg",
+                    "description": "跨架构|LGPL-2.1",
+                    "url": "https://www.qemu.org/"
                 }
             ]
         },
@@ -681,6 +785,12 @@
                     "url": "https://playnite.link/"
                 },
                 {
+                    "name": "Lutris",
+                    "icon": "/static/logo/lutris.webp",
+                    "description": "Linux游戏整合|GPL-3.0",
+                    "url": "https://lutris.net/"
+                },
+                {
                     "name": "硬件监控",
                     "divider": true
                 },
@@ -718,6 +828,11 @@
                     "name": "AssetRipper",
                     "description": "解包Unity资源",
                     "url": "https://github.com/AssetRipper/AssetRipper"
+                },
+                {
+                    "name": "RPGMakerDecrypter",
+                    "description": "解包RPGMaker资源包",
+                    "url": "https://github.com/uuksu/RPGMakerDecrypter"
                 }
             ]
         },
@@ -817,6 +932,21 @@
                     "icon": "/static/logo/amd.svg",
                     "description": "Windows更新会自动降级记得屏蔽",
                     "url": "https://www.amd.com/zh-hans/support"
+                },
+                {
+                    "name": "Alternative A2DP",
+                    "icon": "/static/logo/a2dp.svg",
+                    "description": "替代系统蓝牙驱动以开启LDAC",
+                    "url": "https://www.bluetoothgoodies.com/a2dp/"
+                },
+                {
+                    "name": "琴梨梨收集的杂项驱动",
+                    "divider": true
+                },
+                {
+                    "name": "6206LX声卡驱动",
+                    "description": "该版本可正常使用SPDIF数字输出",
+                    "url": "https://github.com/GlacierLab/.github/releases/tag/6206LX"
                 }
             ]
         }
