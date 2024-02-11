@@ -419,11 +419,12 @@
                 padding: 8px;
             }
 
-            &>H3 {
+            &>span {
                 line-height: 24px;
                 margin: 8px;
                 margin-left: 0px;
                 font-weight: 500;
+                font-size: 1.25em;
 
                 @media (max-width:500px) {
                     display: none;
@@ -470,6 +471,54 @@
             border: solid 1px #dfaeff;
             border-radius: 4px;
         }
+
+        .bottom {
+            height: 32px;
+            box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.4);
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+
+            >.recentText {
+                line-height: 32px;
+                padding-left: 8px;
+                font-size: 1.25em;
+                color: #333;
+            }
+
+            >.recentItem {
+                flex-shrink: 0;
+                height: 32px;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                display: flex;
+                flex-direction: row;
+                transition: all 0.2s;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.15);
+                }
+
+                &:active {
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+
+                >.recentItemIcon {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 4px;
+                }
+
+                >.recentItemTitle {
+                    line-height: 24px;
+                    font-size: 1em;
+                    color: #000;
+                }
+            }
+        }
     </style>
 
     <style id="webstyle">
@@ -478,7 +527,7 @@
         }
 
         .main {
-            height: calc(100% - 96px);
+            height: calc(100% - 128px);
         }
     </style>
     <style id="clientstyle">
@@ -492,7 +541,7 @@
         }
 
         .main {
-            height: calc(100% - 32px);
+            height: calc(100% - 64px);
         }
     </style>
     <script>
@@ -514,11 +563,11 @@
             <div class="title" style="flex-shrink: 0;">
                 <div class="titleBtn" style="display:none;">
                     <img src="/static/icon/desktop.svg" alt="桌面版">
-                    <H3>桌面版</H2>
+                    <span>桌面版</span>
                 </div>
                 <div class="titleBtn" onclick="Module.yuni.showFrame('/about.html')">
                     <img src="/static/icon/info.svg" alt="关于">
-                    <H3>关于</H2>
+                    <span>关于</span>
                 </div>
             </div>
         </div>
@@ -536,6 +585,8 @@
     <div class="main">
         <div class="side"></div>
         <div class="list"></div>
+    </div>
+    <div class="bottom">
     </div>
     <script>
         const sleep = delay => new Promise((resolve) => setTimeout(resolve, delay));
@@ -761,6 +812,43 @@
                 set: (key, value) => {
                     Module.pref.data[key] = value;
                     Module.pref.sync();
+                },
+                addRecent: (icon, name, url) => {
+                    let recent = Module.pref.get("recent") || [];
+                    recent.unshift({ icon: icon, name: name, url: url });
+                    recent = recent.filter((value, index, self) =>
+                        index === self.findIndex((t) => (
+                            t.place === value.place && t.name === value.name
+                        ))
+                    )
+                    recent = recent.slice(0, 50);
+                    Module.pref.set("recent", recent);
+                    Module.recent.render();
+                }
+            },
+            //最近使用
+            recent: {
+                init: () => {
+                    Module.recent.render();
+                },
+                render: () => {
+                    document.querySelector(".bottom").innerHTML = "";
+                    let recent = Module.pref.get("recent") || [];
+                    if (recent.length) {
+                        recent.forEach((item, index) => {
+                            const list = document.createElement("a");
+                            list.className = "recentItem";
+                            list.innerHTML = (item.icon ? `<img class="recentItemIcon" src="${item.icon}" alt="${item.name}">` : "") + `<span class="recentItemTitle">${item.name}</span>`;
+                            list.href = item.url;
+                            item.url.startsWith("http") ? list.target = "_blank" : false;
+                            document.querySelector(".bottom").appendChild(list);
+                        });
+                    } else {
+                        const text = document.createElement("span");
+                        text.className = "recentText";
+                        text.innerText = "最近使用过的内容会出现在这里捏";
+                        document.querySelector(".bottom").appendChild(text);
+                    }
                 }
             },
             //桌面版同步
@@ -891,13 +979,14 @@
                         `;
                         list.href = item.url;
                         item.url.startsWith("http") ? list.target = "_blank" : false;
-                        if (self != top && item.desktop) {
-                            list.addEventListener("click", event => {
+                        list.addEventListener("click", event => {
+                            if (self != top && item.desktop) {
                                 event.preventDefault();
                                 event.stopPropagation();
                                 window.parent.postMessage("ADD-" + item.desktop, "*");
-                            });
-                        }
+                            }
+                            Module.pref.addRecent(item.icon, item.name, item.url);
+                        });
                         document.querySelector(".list").appendChild(list);
                     });
                 },
