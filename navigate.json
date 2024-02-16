@@ -1,5 +1,5 @@
 ﻿{
-    "version": "202402011",
+    "version": "202402016",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -904,6 +904,82 @@
                     "icon": "/static/logo/x64dbg.webp",
                     "description": "反汇编调试",
                     "url": "https://x64dbg.com/"
+                },
+                {
+                    "name": "SDK",
+                    "divider": true
+                },
+                {
+                    "name": "CUDA Toolkit",
+                    "icon": "/static/logo/nvidia.svg",
+                    "description": "",
+                    "url": "https://developer.nvidia.com/cuda-downloads"
+                },
+                {
+                    "name": "Vulkan SDK",
+                    "description": "",
+                    "url": "https://www.lunarg.com/vulkan-sdk/"
+                },
+                {
+                    "name": "Windows SDK",
+                    "description": "DirectX SDK也包括在内",
+                    "url": "https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/"
+                },
+                {
+                    "name": "FNA",
+                    "description": "XNA4.0的开源跨平台实现",
+                    "url": "https://fna-xna.github.io/"
+                }
+            ]
+        },
+        {
+            "name": "运行时",
+            "icon": "/static/icon/runtime.svg",
+            "sublist": [
+                {
+                    "name": "支撑程序运行的基础库",
+                    "intro": true
+                },
+                {
+                    "name": "Visual C++ 运行时",
+                    "description": "解决vcruntime.dll缺失",
+                    "url": "https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"
+                },
+                {
+                    "name": "DirectX 用户运行时",
+                    "description": "已被微软标记为废弃但仍被大量使用",
+                    "url": "https://www.microsoft.com/en-us/download/details.aspx?id=8109"
+                },
+                {
+                    "name": ".NET Core运行时",
+                    "description": "不同架构需要分别安装",
+                    "url": "https://dotnet.microsoft.com/download/dotnet"
+                },
+                {
+                    "name": ".NET Framework运行时",
+                    "description": "Win10以上需通过控制面板安装",
+                    "url": "https://dotnet.microsoft.com/en-us/download/dotnet-framework"
+                },
+                {
+                    "name": "OpenAL",
+                    "description": "3D音频支持",
+                    "url": "https://www.openal.org/downloads/"
+                },
+                {
+                    "name": "PhyX Legacy",
+                    "icon": "/static/logo/nvidia.svg",
+                    "description": "UE3游戏大多需要",
+                    "url": "https://www.nvidia.com/en-us/drivers/physx/physx-9-13-0604-legacy-driver/"
+                },
+                {
+                    "name": "XNA Framework运行时",
+                    "description": "建议使用开源的FNA代替",
+                    "url": "https://www.microsoft.com/download/details.aspx?id=20914"
+                },
+                {
+                    "name": "K-Lite Codec Pack",
+                    "description": "适用于N版Windows的解码包",
+                    "url": "https://www.codecguide.com/download_k-lite_codec_pack_basic.htm"
                 }
             ]
         },
@@ -938,6 +1014,11 @@
                     "icon": "/static/logo/a2dp.svg",
                     "description": "替代系统蓝牙驱动以开启LDAC",
                     "url": "https://www.bluetoothgoodies.com/a2dp/"
+                },
+                {
+                    "name": "ASIO4ALL",
+                    "description": "Windows的ASIO驱动",
+                    "url": "https://asio4all.org/about/download-asio4all/"
                 },
                 {
                     "name": "琴梨梨收集的杂项驱动",
