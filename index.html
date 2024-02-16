@@ -647,6 +647,12 @@
                             }
                         }
                     });
+                    document.getElementById("logo").addEventListener("contextmenu", async (event) => {
+                        event.preventDefault();
+                        document.getElementById("title").innerText = "更新导航数据...";
+                        await Module.naviUpdater.updateAndRender();
+                        document.getElementById("title").innerText = "导航数据更新成功";
+                    });
                 }
             },
             yuni: {
@@ -894,12 +900,10 @@
                         Module.logger.collect(e);
                     }
                 },
-                updateAndRender: async (btn) => {
-                    btn ? btn.innerText = "更新中..." : false;
+                updateAndRender: async () => {
                     await Module.naviUpdater.update();
                     window.naviList = await Module.naviUpdater.getData();
                     Module.list.render();
-                    btn ? btn.innerText = "更新完成" : false;
                 }
             },
             top: {
