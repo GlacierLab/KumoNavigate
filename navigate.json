@@ -1,5 +1,5 @@
 ﻿{
-    "version": "202402016",
+    "version": "20240407",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -397,6 +397,12 @@
                     "url": "https://www.cdkeys.com/"
                 },
                 {
+                    "name": "Gamesplanet",
+                    "icon": "/static/logo/gamesplanet.webp",
+                    "description": "注意激活地区限制",
+                    "url": "https://us.gamesplanet.com/"
+                },
+                {
                     "name": "三方交易",
                     "divider": true
                 },
@@ -561,6 +567,12 @@
                     "icon": "/static/logo/buildit.webp",
                     "description": "",
                     "url": "https://simcity-buildit.fandom.com/wiki/SimCity_BuildIt_Wiki"
+                },
+                {
+                    "name": "史莱姆牧场Wiki",
+                    "icon": "/static/logo/slimerancher.webp",
+                    "description": "Slime Rancher Wiki",
+                    "url": "https://slimerancher.fandom.com/wiki/Slime_Rancher_Wiki"
                 },
                 {
                     "name": "游戏评测与资讯",
