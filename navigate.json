@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240407",
+    "version": "20240410",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -72,9 +72,15 @@
                     "url": "https://www.gog.com/"
                 },
                 {
+                    "name": "战网国服（预约）",
+                    "icon": "/static/logo/battle.svg",
+                    "description": "牢雪打赢复活赛了",
+                    "url": "https://wow.blizzard.cn/"
+                },
+                {
                     "name": "Battle.net",
                     "icon": "/static/logo/battle.svg",
-                    "description": "你猜国服啥时打赢复活赛",
+                    "description": "国际服",
                     "url": "https://download.battle.net/zh-cn/desktop"
                 },
                 {
