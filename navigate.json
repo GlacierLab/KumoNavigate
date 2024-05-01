@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240407",
+    "version": "20240501",
     "top": [
         {
             "icon": "/static/icon/desktop.svg",
@@ -828,6 +828,28 @@
                     "url": "https://www.dogfight360.com/blog/475"
                 },
                 {
+                    "name": "修改器",
+                    "divider": true
+                },
+                {
+                    "name": "Save Editor Online",
+                    "icon": "/static/logo/saveeditor.webp",
+                    "description": "在线编辑游戏存档",
+                    "url": "https://www.saveeditonline.com/"
+                },
+                {
+                    "name": "Cheat Engine",
+                    "icon": "/static/logo/cheatengine.webp",
+                    "description": "修改游戏内存数据",
+                    "url": "https://www.cheatengine.org/"
+                },
+                {
+                    "name": "风灵月影修改器",
+                    "icon": "/static/logo/fling.webp",
+                    "description": "不要下载3DM版本切记",
+                    "url": "https://flingtrainer.com/"
+                },
+                {
                     "name": "解包工具",
                     "divider": true
                 },
@@ -897,6 +919,12 @@
                     "url": "https://godotengine.org/"
                 },
                 {
+                    "name": "Source SDK",
+                    "icon": "/static/logo/source.svg",
+                    "description": "",
+                    "url": "https://developer.valvesoftware.com/wiki/SDK_Installation"
+                },
+                {
                     "name": "调试工具",
                     "divider": true
                 },
@@ -905,6 +933,18 @@
                     "icon": "/static/logo/nsight.webp",
                     "description": "性能分析",
                     "url": "https://developer.nvidia.com/nsight-systems"
+                },
+                {
+                    "name": "Intel GPA",
+                    "icon": "/static/logo/intel.webp",
+                    "description": "性能分析",
+                    "url": "https://www.intel.com/content/www/us/en/developer/tools/graphics-performance-analyzers/overview.html"
+                },
+                {
+                    "name": "Intel PresentMon",
+                    "icon": "/static/logo/intel.webp",
+                    "description": "呈现方式分析|MIT",
+                    "url": "https://github.com/GameTechDev/PresentMon"
                 },
                 {
                     "name": "apitrace",
