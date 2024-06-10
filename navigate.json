@@ -1,10 +1,6 @@
 ﻿{
-    "version": "20240501",
+    "version": "20240610",
     "top": [
-        {
-            "icon": "/static/icon/desktop.svg",
-            "info": "云酱桌面版正在开发中，别急！"
-        },
         {
             "icon": "/static/icon/group.svg",
             "info": "云酱官方群616107007欢迎加入"
@@ -257,6 +253,28 @@
                     "url": "https://www.leagueoflegends.com/"
                 },
                 {
+                    "name": "西山居",
+                    "divider": true
+                },
+                {
+                    "name": "剑网3",
+                    "icon": "/static/logo/seasun/jx3.webp",
+                    "description": "众生平等的掉帧",
+                    "url": "https://jx3.xoyo.com/"
+                },
+                {
+                    "name": "尘白禁区|国服",
+                    "icon": "/static/logo/seasun/cbjq.webp",
+                    "description": "泳装活动当然要冬天上",
+                    "url": "https://www.cbjq.com/"
+                },
+                {
+                    "name": "尘白禁区|外服",
+                    "icon": "/static/logo/seasun/cbjq.webp",
+                    "description": "也可从Epic获取",
+                    "url": "https://snowbreak.amazingseasun.com/#/en?id=1"
+                },
+                {
                     "name": "音游类",
                     "divider": true
                 },
@@ -271,6 +289,16 @@
                     "icon": "/static/logo/sdvx.webp",
                     "description": "需按月付费，可使用键盘",
                     "url": "https://p.eagate.573.jp/game/eacsdvx/vi/index.html"
+                },
+                {
+                    "name": "其他",
+                    "divider": true
+                },
+                {
+                    "name": "Black Desert黑色沙漠",
+                    "icon": "/static/logo/bdo.webp",
+                    "description": "NA/EU服",
+                    "url": "https://www.naeu.playblackdesert.com/"
                 }
             ]
         },
@@ -497,6 +525,18 @@
                     "icon": "/static/logo/deal.svg",
                     "description": "游戏比价",
                     "url": "https://new.isthereanydeal.com/"
+                },
+                {
+                    "name": "AllKeyShop",
+                    "icon": "/static/logo/allkeyshop.webp",
+                    "description": "游戏比价",
+                    "url": "https://www.allkeyshop.com/blog/"
+                },
+                {
+                    "name": "GG.deals",
+                    "icon": "/static/logo/gg.deals.webp",
+                    "description": "游戏比价",
+                    "url": "https://gg.deals/"
                 },
                 {
                     "name": "GamerPower",
@@ -809,6 +849,12 @@
                     "url": "https://lutris.net/"
                 },
                 {
+                    "name": "Heroic",
+                    "icon": "/static/logo/heroic.webp",
+                    "description": "Epic+Amazon+GOG整合替代|GPL-3.0",
+                    "url": "https://heroicgameslauncher.com/"
+                },
+                {
                     "name": "硬件监控",
                     "divider": true
                 },
@@ -856,7 +902,7 @@
                     "url": "https://flingtrainer.com/"
                 },
                 {
-                    "name": "解包工具",
+                    "name": "解包/Mod工具",
                     "divider": true
                 },
                 {
@@ -873,6 +919,16 @@
                     "name": "RPGMakerDecrypter",
                     "description": "解包RPGMaker资源包",
                     "url": "https://github.com/uuksu/RPGMakerDecrypter"
+                },
+                {
+                    "name": "UABEA",
+                    "description": "解包高版本Unity资源",
+                    "url": "https://github.com/nesrak1/UABEA"
+                },
+                {
+                    "name": "Melon Loader",
+                    "description": "Unity游戏通用Mod加载器",
+                    "url": "https://github.com/LavaGang/MelonLoader"
                 }
             ]
         },
