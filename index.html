@@ -391,7 +391,7 @@
                 width: calc(100vw - 80px);
             }
 
-            H1 {
+            #title {
                 display: none;
             }
         }
@@ -404,6 +404,12 @@
 
         @media (max-width:200px) {
             .listItemTextGroup {
+                display: none;
+            }
+        }
+
+        @media (max-width:550px) {
+            #fulltitle {
                 display: none;
             }
         }
@@ -558,9 +564,14 @@
         <div class="title" style="height:40px;justify-content: space-between;">
             <div class="title" style="flex-shrink: 1;min-width: 40px;">
                 <img id="logo" style="width:40px;height:40px;padding:4px;" src="icon.png" alt="云酱游戏导航">
-                <H1 id="title" style="margin:5px;line-height:30px;font-size:1.75em;font-weight: 500;">云酱游戏导航</H1>
+                <H1 id="title" style="margin:5px;line-height:30px;font-size:1.75em;font-weight: 500;"><b>云酱</b><b
+                        id="fulltitle">游戏导航</b></H1>
             </div>
             <div class="title" style="flex-shrink: 0;">
+                <div class="titleBtn" onclick="Module.toolbox.show()">
+                    <img src="/static/icon/toolbox.svg" alt="工具箱">
+                    <span>工具箱</span>
+                </div>
                 <div class="titleBtn" style="display:none;">
                     <img src="/static/icon/desktop.svg" alt="桌面版">
                     <span>桌面版</span>
@@ -593,6 +604,14 @@
         const random = (min, max) => {
             return Math.round(Math.random() * (max - min)) + min;
         };
+        const loadScriptAsync = link => {
+            return new Promise(resolve => {
+                let script = document.createElement("script");
+                script.src = link;
+                script.onload = resolve;
+                document.body.appendChild(script);
+            });
+        }
         const link = (url, external, deeplink) => {
             if (external) {
                 window.open(url, "_blank");
@@ -616,6 +635,9 @@
                 wait: async () => {
                     await sleep(Math.pow(2, Module.netTick.tick) * 1000);
                     Module.netTick.tick++;
+                },
+                reset: () => {
+                    Module.netTick.tick = 0;
                 }
             },
             logoclick: {
@@ -892,6 +914,7 @@
                         await Module.netTick.wait();
                         return await Module.naviUpdater.update();
                     };
+                    Module.netTick.reset();
                     try {
                         //自动Minify
                         localStorage.naviCache = JSON.stringify(jsonText);

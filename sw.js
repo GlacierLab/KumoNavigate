@@ -1,5 +1,5 @@
 var APP_PREFIX = '云酱游戏导航';
-var VERSION = '2.20240216';
+var VERSION = '2.20240616';
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = []
 
@@ -10,13 +10,16 @@ self.addEventListener('fetch', function (event) {
         return;
     }
     const getCacheName = url => {
-        if (url.indexOf("/static/") > 0 && url.split("/").length >= 6) {
+        if (url.indexOf("/static/") > 0 && url.startsWith(location.origin)) {
             return "StaticCache"
+        };
+        if (url.indexOf("/plugins/") > 0 && url.startsWith(location.origin)) {
+            return "Plugin"
         };
         return CACHE_NAME;
     }
 
-    if (event.request.method == "GET" && (event.request.url.indexOf("http") == 0) && (event.request.url.indexOf("ForceNoCache") == -1) && (event.request.url.indexOf("doubleclick") == -1) && (event.request.url.indexOf("google") == -1)) {
+    if (event.request.method == "GET" && (event.request.url.indexOf("http") == 0) && (event.request.url.indexOf("ForceNoCache") == -1) && (event.request.url.startsWith(location.origin))) {
         event.respondWith(
             caches.open(getCacheName(event.request.url)).then(function (cache) {
                 return cache.match(event.request).then(function (response) {

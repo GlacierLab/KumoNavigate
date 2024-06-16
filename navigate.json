@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240610",
+    "version": "20240616",
     "top": [
         {
             "icon": "/static/icon/group.svg",
@@ -1144,6 +1144,15 @@
                     "url": "https://github.com/GlacierLab/.github/releases/tag/6206LX"
                 }
             ]
+        }
+    ],
+    "plugins": [
+        {
+            "name": "Battlelog离线剧情修复",
+            "icon": "/static/logo/battlelog.webp",
+            "description": "战地3&硬仗离线进入单人剧情，修复损坏的EA离线模式",
+            "path": "battlelog",
+            "version": "20240616"
         }
     ]
 }
