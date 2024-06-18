@@ -17,38 +17,34 @@
     <meta name="referrer" content="no-referrer" />
     <meta name="theme-color" content="#DFAEFF">
     <title>云酱工具箱</title>
+    <script defer src="module/base.js"></script>
     <style>
         ::-webkit-scrollbar {
             height: 12px;
-            width: 4px;
+            width: 8px;
             background: transparent;
             z-index: 12;
             overflow: visible;
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: #bfee6f4e;
+            width: 10px;
+            background-color: #DFAEFF;
             z-index: 12;
-            border-left: 2px solid rgba(0, 0, 0, 0);
+            border: 3px solid rgba(0, 0, 0, 0);
             background-clip: padding-box;
             transition: background-color .32s ease-in-out;
+            margin: 4px;
+            min-height: 32px;
+            min-width: 32px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #bfee6faf;
+            background: #DFAEFF;
         }
 
         ::-webkit-scrollbar-corner {
             background: #202020;
-        }
-
-        a {
-            color: darkorange;
-            text-decoration: none !important;
-        }
-
-        li {
-            user-select: all !important;
         }
 
         * {
@@ -58,26 +54,6 @@
             margin: 0;
             padding: 0;
             -webkit-tap-highlight-color: transparent;
-        }
-
-        hr {
-            width: 100%;
-            height: 8px;
-            color: #333;
-            overflow: visible;
-            border: none;
-            border-top: 2px solid;
-            margin: 8px;
-            margin-top: 12px;
-        }
-
-        hr::after {
-            font-size: 0.85em;
-            background-image: linear-gradient(transparent, white, white, transparent);
-            content: ' ' attr(name)' ';
-            padding: 0 4px;
-            position: relative;
-            top: -13px;
         }
 
         body {
@@ -151,32 +127,13 @@
     <div class="content">
     </div>
     <script>
-        const sleep = delay => new Promise((resolve) => setTimeout(resolve, delay));
-        const humanFileSize = (bytes, si = false, dp = 3) => {
-            const thresh = si ? 1000 : 1024;
-
-            if (Math.abs(bytes) < thresh) {
-                return bytes + ' B';
-            };
-
-            const units = si
-                ? ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
-                : ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
-            let u = -1;
-            const r = 10 ** dp;
-
-            do {
-                bytes /= thresh;
-                ++u;
-            } while (Math.round(Math.abs(bytes) * r) / r >= thresh && u < units.length - 1);
-
-
-            return bytes.toFixed(dp) + ' ' + units[u];
-        }
-        const status = (text, loading) => {
-            document.getElementById("status").innerText = text;
-            document.getElementById("loading").style.display = loading ? "inline" : "none";
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            util.status = (text, loading) => {
+                document.getElementById("status").innerText = text;
+                document.getElementById("loading").style.display = loading ? "inline" : "none";
+            }
+            util.status("工具箱即将上线");
+        });
     </script>
 </body>
 
