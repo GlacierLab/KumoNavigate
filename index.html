@@ -599,450 +599,140 @@
     </div>
     <div class="bottom">
     </div>
+    <script src="module/base.js"></script>
     <script>
-        const sleep = delay => new Promise((resolve) => setTimeout(resolve, delay));
-        const random = (min, max) => {
-            return Math.round(Math.random() * (max - min)) + min;
-        };
-        const loadScriptAsync = link => {
-            return new Promise(resolve => {
-                let script = document.createElement("script");
-                script.src = link;
-                script.onload = resolve;
-                document.body.appendChild(script);
-            });
-        }
-        const link = (url, external, deeplink) => {
-            if (external) {
-                window.open(url, "_blank");
-            } else {
-                location.href = url;
-            }
-        };
-        const Module = {
-            autoinit: {
-                run: async () => {
-                    for (const [key, value] of Object.entries(Module)) {
-                        if (value.init) {
-                            console.log("Module " + key + " init;");
-                            await value.init();
-                        }
-                    };
-                }
-            },
-            netTick: {
-                tick: 0,
-                wait: async () => {
-                    await sleep(Math.pow(2, Module.netTick.tick) * 1000);
-                    Module.netTick.tick++;
-                },
-                reset: () => {
-                    Module.netTick.tick = 0;
-                }
-            },
-            logoclick: {
-                init: () => {
-                    let click = 0;
-                    document.getElementById("logo").addEventListener("click", () => {
-                        click++;
-                        if (click >= 5) {
-                            function getVideoCardInfo() {
-                                const gl = document.createElement('canvas').getContext('webgl');
-                                if (!gl) {
-                                    return false;
-                                }
-                                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-                                return debugInfo ? {
-                                    vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
-                                    renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
-                                } : false;
-                            }
-                            let GPUinfo = getVideoCardInfo();
-                            if (GPUinfo) {
-                                let GPUname = GPUinfo.renderer;
-                                if (GPUinfo.renderer.indexOf("ANGLE") == 0) {
-                                    GPUname = GPUname.substring(GPUname.indexOf(",") + 2, GPUname.indexOf("Direct3D") - 1);
-                                }
-                                document.getElementById("logo").src = "/static/icon/gpu.webp";
-                                document.getElementById("logo").alt = "显卡信息";
-                                document.getElementById("title").innerText = GPUname;
-                            }
-                        }
-                    });
-                    document.getElementById("logo").addEventListener("contextmenu", async (event) => {
-                        event.preventDefault();
-                        document.getElementById("title").innerText = "更新导航数据...";
-                        await Module.naviUpdater.updateAndRender();
-                        document.getElementById("title").innerText = "导航数据更新成功";
-                    });
-                }
-            },
-            yuni: {
-                init: () => {
-                    function loadCssCode(code) {
-                        var style = document.createElement('style')
-                        style.type = 'text/css'
-                        style.rel = 'stylesheet'
-                        style.appendChild(document.createTextNode(code))
-                        var head = document.getElementsByTagName('head')[0]
-                        head.appendChild(style)
-                    }
-                    loadCssCode(`#setFrame {
-    max-width: 600px;
-    margin: auto;
-    padding: 100%;
-    width: 100%;
-    height: calc(100% - 32px);
-}
-
-#closeBtn {
-    width: 100vw;
-    height: 32px;
-    border-radius: 10px 10px 0px 0px;
-    transition: background-color 0.2s, transform 0.3s ease-in-out;
-}
-
-#closeBtn:hover {
-    background-color: #cccccc;
-}
-
-#closeBtn:active {
-    background-color: #999999
-}
-
-#closeBtn.active {
-    background-color: #FADCBB
-}
-
-#floatMenuContainer {
-    transition: opacity 0.2s ease-in;
-    opacity: 0;
-    display: none;
-    z-index: 9999;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: auto;
-    width: auto;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
-#floatMenu {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100vw;
-    height: 90vh;
-    border-radius: 10px 10px 0px 0px;
-    backdrop-filter: blur(10px) brightness(100%);
-    -webkit-backdrop-filter: blur(10px) brightness(100%);
-    background-color: rgba(255, 255, 255, 0.75);
-    margin-top: 100vh;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    transition: margin-top 0.5s ease-out;
-}
-
-#loading {
-    width: 32px;
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}`);
-                    const framediv = `<div id="floatMenuContainer">
-<div id="floatMenu"> 
-    <img role="button" aria-label="关闭弹出页面" id="closeBtn" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik02IDlMNDIgOSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik02IDE5TDQyIDE5IiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTYgMjZMMjQgNDBMNDIgMjYiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=">
-    <iframe title="弹出页面" id="setFrame" frameborder="0"></iframe>
-    <img alt="加载中" id="loading" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgd2lkdGg9JzEyMHB4JyBoZWlnaHQ9JzEyMHB4JyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCI+DQogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9Im5vbmUiIGNsYXNzPSJiayI+PC9yZWN0Pg0KICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQwIiBzdHJva2U9IiNEQ0FDODkiIGZpbGw9Im5vbmUiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJidXR0Ij4NCiAgICAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0ic3Ryb2tlLWRhc2hvZmZzZXQiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBmcm9tPSIwIiB0bz0iNTAyIj48L2FuaW1hdGU+DQogICAgICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNoYXJyYXkiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiB2YWx1ZXM9IjE1MC42IDEwMC40OzEgMjUwOzE1MC42IDEwMC40Ij48L2FuaW1hdGU+DQogICAgPC9jaXJjbGU+DQo8L3N2Zz4=">
-</div>
-</div>`
-                    document.body.insertAdjacentHTML('beforeend', framediv);
-                    const sleep = delay => new Promise((resolve) => setTimeout(resolve, delay));
-                    //弹出
-                    const rebuildFrame = url => {
-                        if (document.getElementById("setFrame")) {
-                            document.getElementById("floatMenu").removeChild(document.getElementById("setFrame"));
-                        };
-                        let newFrame = document.createElement("iframe");
-                        newFrame.id = "setFrame";
-                        newFrame.frameBorder = 0;
-                        document.getElementById("closeBtn").insertAdjacentElement("afterend", newFrame)
-                        newFrame.src = url;
-                        newFrame.title = "弹出页面";
-                        newFrame.addEventListener("load", () => {
-                            document.getElementById("loading").style.display = "none";
-                            newFrame.style.padding = "0px";
-                        });
-                    };
-                    window.addEventListener("message", async (event) => {
-                        console.log(event.data)
-                        if (typeof event.data == "string") {
-                            if (event.data == "close") {
-                                document.getElementById("floatMenuContainer").style.opacity = 0;
-                                document.getElementById("floatMenu").style.marginTop = "100vh";
-                                await sleep(500);
-                                document.getElementById("floatMenuContainer").style.display = "none";
-                            }
-                            if (event.data.startsWith("http")) {
-                                document.getElementById("loading").style.display = "block";
-                                rebuildFrame(event.data);
-                            }
-                        }
-                    }, false);
-                    Module.yuni.showFrame = async (url, wide) => {
-                        //使用iframe渲染设置
-                        document.getElementById("floatMenuContainer").style.display = "block";
-                        await sleep(1);
-                        document.getElementById("floatMenuContainer").style.opacity = 1;
-                        document.getElementById("floatMenu").style.marginTop = "10vh";
-                        document.getElementById("loading").style.display = "block";
-                        rebuildFrame(url);
-                        if (wide) {
-                            document.getElementById("setFrame").style.maxWidth = "100vw";
+        //初始化
+        (async () => {
+            await Module.autoinit.initEverything();
+            ModuleLoader.loadLocal({
+                //桌面版同步
+                desktopSync: {
+                    init: () => {
+                        if (self != top) {
+                            window.addEventListener("message", async (event) => {
+                                console.log(event.data);
+                            }, false);
+                            window.parent.postMessage("GET-", "*");
                         }
                     }
-                    document.getElementById("closeBtn").addEventListener("click", async (event) => {
-                        event.stopPropagation();
-                        document.getElementById("floatMenu").style.marginTop = "100vh";
-                        document.getElementById("floatMenuContainer").style.opacity = 0;
-                        await sleep(500);
-                        document.getElementById("floatMenuContainer").style.display = "none";
-                        document.getElementById("floatMenu").removeChild(document.getElementById("setFrame"));
-                    })
                 },
-            },
-            logger: {
-                collect: (error) => {
-                    console.warn(error.message);
-                }
-            },
-            pref: {
-                init: () => {
-                    if (localStorage.pref) {
-                        Module.pref.data = JSON.parse(localStorage.pref);
-                    } else {
-                        Module.pref.sync();
-                    }
-                },
-                data: {},
-                sync: () => {
-                    localStorage.pref = JSON.stringify(Module.pref.data);
-                },
-                get: (key) => {
-                    return Module.pref.data[key] || false;
-                },
-                set: (key, value) => {
-                    Module.pref.data[key] = value;
-                    Module.pref.sync();
-                },
-                addRecent: (icon, name, url) => {
-                    let recent = Module.pref.get("recent") || [];
-                    recent.unshift({ icon: icon, name: name, url: url });
-                    recent = recent.filter((value, index, self) =>
-                        index === self.findIndex((t) => (
-                            t.place === value.place && t.name === value.name
-                        ))
-                    )
-                    recent = recent.slice(0, 50);
-                    Module.pref.set("recent", recent);
-                    Module.recent.render();
-                }
-            },
-            //最近使用
-            recent: {
-                init: () => {
-                    Module.recent.render();
-                },
-                render: () => {
-                    document.querySelector(".bottom").innerHTML = "";
-                    let recent = Module.pref.get("recent") || [];
-                    if (recent.length) {
-                        recent.forEach((item, index) => {
-                            const list = document.createElement("a");
-                            list.className = "recentItem";
-                            list.innerHTML = (item.icon ? `<img class="recentItemIcon" src="${item.icon}" alt="${item.name}">` : "") + `<span class="recentItemTitle">${item.name}</span>`;
-                            list.href = item.url;
-                            item.url.startsWith("http") ? list.target = "_blank" : false;
-                            document.querySelector(".bottom").appendChild(list);
-                        });
-                    } else {
-                        const text = document.createElement("span");
-                        text.className = "recentText";
-                        text.innerText = "最近使用过的内容会出现在这里捏";
-                        document.querySelector(".bottom").appendChild(text);
-                    }
-                }
-            },
-            //桌面版同步
-            desktopSync: {
-                init: () => {
-                    if (self != top) {
-                        window.addEventListener("message", async (event) => {
-                            console.log(event.data);
-                        }, false);
-                        window.parent.postMessage("GET-", "*");
-                    }
-                }
-            },
-            naviUpdater: {
-                init: async () => {
-                    window.naviList = await Module.naviUpdater.getData();
-                    Module.top.render();
-                    Module.list.render();
-                    if ((Module.pref.get("lastNaviUpdate") == new Date().toLocaleDateString()) && localStorage.naviCache) { } else {
+                naviRender: {
+                    init: async () => {
+                        window.naviList = await Module.naviUpdater.getData();
+                        Module.top.render();
+                        Module.list.render();
+                        Module.naviUpdater.init();
+                    },
+                    updateAndRender: async () => {
                         await Module.naviUpdater.update();
-                    };
-                },
-                getData: async () => {
-                    if (!localStorage.naviCache) {
-                        await Module.naviUpdater.update();
-                    };
-                    return JSON.parse(localStorage.naviCache);
-                },
-                update: async () => {
-                    let jsonText = "";
-                    try {
-                        jsonText = await (await fetch("navigate.json?ForceNoCache=1")).json();
-                    } catch (e) {
-                        Module.logger.collect(e);
-                        await Module.netTick.wait();
-                        return await Module.naviUpdater.update();
-                    };
-                    Module.netTick.reset();
-                    try {
-                        //自动Minify
-                        localStorage.naviCache = JSON.stringify(jsonText);
-                        Module.pref.set("lastNaviUpdate", new Date().toLocaleDateString())
-                    } catch (e) {
-                        Module.logger.collect(e);
+                        window.naviList = await Module.naviUpdater.getData();
+                        Module.list.render();
                     }
                 },
-                updateAndRender: async () => {
-                    await Module.naviUpdater.update();
-                    window.naviList = await Module.naviUpdater.getData();
-                    Module.list.render();
-                }
-            },
-            top: {
-                render: () => {
-                    //顶栏
-                    const topInfo = naviList.top[random(0, naviList.top.length - 1)];
-                    document.getElementById("notiIcon").src = topInfo.icon;
-                    document.getElementById("notiIcon").alt = topInfo.info;
-                    document.getElementById("notiText").innerText = topInfo.info;
-                    if (topInfo.url) {
-                        document.getElementById("noti").onclick = () => {
-                            link(topInfo.url, topInfo.url.startsWith("http"));
+                top: {
+                    render: () => {
+                        //顶栏
+                        const topInfo = naviList.top[util.random(0, naviList.top.length - 1)];
+                        document.getElementById("notiIcon").src = topInfo.icon;
+                        document.getElementById("notiIcon").alt = topInfo.info;
+                        document.getElementById("notiText").innerText = topInfo.info;
+                        if (topInfo.url) {
+                            document.getElementById("noti").onclick = () => {
+                                util.link(topInfo.url, topInfo.url.startsWith("http"));
+                            }
+                        }
+                        if (naviList.top.length > 1) {
+                            setTimeout(Module.top.render, 60000);
                         }
                     }
-                    if (naviList.top.length > 1) {
-                        setTimeout(Module.top.render, 60000);
-                    }
-                }
-            },
-            list: {
-                init: () => {
-                    document.getElementById("searchBtn").addEventListener("click", () => {
-                        Module.list.filter(document.getElementById("search").value);
-                    });
-                    if (self != top) {
-                        document.getElementById("search").setAttribute("placeholder", "支持桌面版扩展的游戏会带有图标，点击即可添加/安装而非打开网页");
-                    }
                 },
-                render: () => {
-                    document.querySelector(".side").innerHTML = "";
-                    window.naviList.list.forEach((item, index) => {
-                        const side = document.createElement("div");
-                        side.className = "sideItem";
-                        side.innerHTML = `
+                list: {
+                    init: () => {
+                        document.getElementById("searchBtn").addEventListener("click", () => {
+                            Module.list.filter(document.getElementById("search").value);
+                        });
+                        if (self != top) {
+                            document.getElementById("search").setAttribute("placeholder", "支持桌面版扩展的游戏会带有图标，点击即可添加/安装而非打开网页");
+                        }
+                    },
+                    render: () => {
+                        document.querySelector(".side").innerHTML = "";
+                        window.naviList.list.forEach((item, index) => {
+                            const side = document.createElement("div");
+                            side.className = "sideItem";
+                            side.innerHTML = `
                         <img class="sideItemIcon" src="${item.icon}" alt="${item.name}">
                         <span class="sideItemTitle">${item.name}</span>
                         `;
-                        side.onclick = () => {
-                            Module.list.renderSublist(item.sublist);
-                            document.querySelector(".sideItem[active]") ? document.querySelector(".sideItem[active]").removeAttribute("active") : false;
-                            side.setAttribute("active", "true");
-                        };
-                        document.querySelector(".side").appendChild(side);
-                    });
-                    document.querySelector(".sideItem").click();
-                },
-                renderSublist: sublist => {
-                    document.querySelector(".list").innerHTML = "";
-                    const newTip = icon => {
-                        return `<img class="tipIcon" src="${icon}">`
-                    }
-                    sublist.forEach((item, index) => {
-                        if ((item.hidden && !Module.pref.get("showHidden")) || (Module.pref.get("hideLegacy") && item.legacy)) { return false; };
-                        if (item.divider) {
-                            const divider = document.createElement("hr");
-                            divider.setAttribute("name", item.name);
-                            document.querySelector(".list").appendChild(divider);
-                            return false;
-                        };
-                        if (item.intro) {
-                            const description = document.createElement("span");
-                            description.innerText = item.name;
-                            description.className = "description";
-                            document.querySelector(".list").appendChild(description);
-                            return false;
+                            side.onclick = () => {
+                                Module.list.renderSublist(item.sublist);
+                                document.querySelector(".sideItem[active]") ? document.querySelector(".sideItem[active]").removeAttribute("active") : false;
+                                side.setAttribute("active", "true");
+                            };
+                            document.querySelector(".side").appendChild(side);
+                        });
+                        document.querySelector(".sideItem").click();
+                    },
+                    renderSublist: sublist => {
+                        document.querySelector(".list").innerHTML = "";
+                        const newTip = icon => {
+                            return `<img class="tipIcon" src="${icon}">`
                         }
-                        const list = document.createElement("a");
-                        list.className = "listItem";
-                        let tipIcons = "";
-                        item.desktop && self != top ? tipIcons += newTip("/static/icon/desktop.svg") : false;
-                        list.innerHTML += item.icon ? `<img class="listItemIcon" src="${item.icon}" alt="${item.name}">` : "";
-                        list.innerHTML += `
+                        sublist.forEach((item, index) => {
+                            if ((item.hidden && !Module.pref.get("showHidden")) || (Module.pref.get("hideLegacy") && item.legacy)) { return false; };
+                            if (item.divider) {
+                                const divider = document.createElement("hr");
+                                divider.setAttribute("name", item.name);
+                                document.querySelector(".list").appendChild(divider);
+                                return false;
+                            };
+                            if (item.intro) {
+                                const description = document.createElement("span");
+                                description.innerText = item.name;
+                                description.className = "description";
+                                document.querySelector(".list").appendChild(description);
+                                return false;
+                            }
+                            const list = document.createElement("a");
+                            list.className = "listItem";
+                            let tipIcons = "";
+                            item.desktop && self != top ? tipIcons += newTip("/static/icon/desktop.svg") : false;
+                            list.innerHTML += item.icon ? `<img class="listItemIcon" src="${item.icon}" alt="${item.name}">` : "";
+                            list.innerHTML += `
                         <div class="listItemTextGroup">
                             <span class="listItemTitle">${item.name}${tipIcons}</span>
                             <span class="listItemDesc">${item.description}</span>
                         </div>
                         `;
-                        list.href = item.url;
-                        item.url.startsWith("http") ? list.target = "_blank" : false;
-                        list.addEventListener("click", event => {
-                            if (self != top && item.desktop) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                                window.parent.postMessage("ADD-" + item.desktop, "*");
-                            }
-                            Module.pref.addRecent(item.icon, item.name, item.url);
+                            list.href = item.url;
+                            item.url.startsWith("http") ? list.target = "_blank" : false;
+                            list.addEventListener("click", event => {
+                                if (self != top && item.desktop) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                    window.parent.postMessage("ADD-" + item.desktop, "*");
+                                }
+                                Module.pref.addRecent(item.icon, item.name, item.url);
+                            });
+                            document.querySelector(".list").appendChild(list);
                         });
-                        document.querySelector(".list").appendChild(list);
-                    });
-                },
-                filter: text => {
-                    let filterList = [];
-                    window.naviList.list.forEach((item, index) => {
-                        item.sublist.forEach((item, index) => {
-                            if ((item.name.toUpperCase().indexOf(text.toUpperCase()) != -1 || (item.description && item.description.toUpperCase().indexOf(text.toUpperCase()) != -1)) && !item.divider && !item.intro) {
-                                filterList.push(item);
-                            };
+                    },
+                    filter: text => {
+                        let filterList = [];
+                        window.naviList.list.forEach((item, index) => {
+                            item.sublist.forEach((item, index) => {
+                                if ((item.name.toUpperCase().indexOf(text.toUpperCase()) != -1 || (item.description && item.description.toUpperCase().indexOf(text.toUpperCase()) != -1)) && !item.divider && !item.intro) {
+                                    filterList.push(item);
+                                };
+                            });
                         });
-                    });
-                    Module.list.renderSublist(filterList);
-                    document.querySelector(".sideItem[active]") ? document.querySelector(".sideItem[active]").removeAttribute("active") : false;
-                }
-            },
-            pwa: {
-                init: async () => {
-                    if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
-                        await navigator.serviceWorker.register('/sw.js');
+                        Module.list.renderSublist(filterList);
+                        document.querySelector(".sideItem[active]") ? document.querySelector(".sideItem[active]").removeAttribute("active") : false;
                     }
                 }
-
-            }
-        };
-        //初始化
-        (async () => {
-            await Module.autoinit.run();
+            });
         })();
+        ModuleLoader.loadRemote("homeAddon")
     </script>
 </body>
 
