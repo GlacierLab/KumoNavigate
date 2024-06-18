@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="云酱游戏工具箱" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="icon" href="/icon.png">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <meta name="apple-mobile-web-app-title" content="云酱游戏导航">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="canonical" href="https://kumo.qinlili.bid/toolbox.html" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#DFAEFF">
+    <title>云酱工具箱</title>
+    <style>
+        ::-webkit-scrollbar {
+            height: 12px;
+            width: 4px;
+            background: transparent;
+            z-index: 12;
+            overflow: visible;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #bfee6f4e;
+            z-index: 12;
+            border-left: 2px solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            transition: background-color .32s ease-in-out;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #bfee6faf;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: #202020;
+        }
+
+        a {
+            color: darkorange;
+            text-decoration: none !important;
+        }
+
+        li {
+            user-select: all !important;
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #bfee6f transparent;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        hr {
+            width: 100%;
+            height: 8px;
+            color: #333;
+            overflow: visible;
+            border: none;
+            border-top: 2px solid;
+            margin: 8px;
+            margin-top: 12px;
+        }
+
+        hr::after {
+            font-size: 0.85em;
+            background-image: linear-gradient(transparent, white, white, transparent);
+            content: ' ' attr(name)' ';
+            padding: 0 4px;
+            position: relative;
+            top: -13px;
+        }
+
+        body {
+            text-align: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+            overflow-y: overlay;
+        }
+
+        .navbar {
+            height: 40px;
+            width: 100%;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .navicon {
+            cursor: pointer;
+            border-radius: 16px;
+            display: inline;
+            width: 40px;
+            height: 40px;
+            padding: 4px;
+            transition: all 0.3s;
+            background-color: transparent;
+        }
+
+        .navicon:hover {
+            border-radius: 0px;
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .navicon:active {
+            border-radius: 0px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .navicon-img {
+            width: 100%;
+            height: 100%
+        }
+
+        #loading {
+            display: inline;
+            width: 40px;
+            height: 40px;
+            padding: 4px;
+        }
+
+        .content {
+            padding-left: 8px;
+            padding-left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div style="display:flex;">
+            <div class="navicon" id="back" onclick="history.back()" aria-label="返回">
+                <img class="navicon-img" src="/static/icon/back.svg">
+            </div>
+        </div>
+        <H3 id="status" style="line-height: 40px;text-overflow: ellipsis;flex-shrink: 0;">正在加载工具箱...</H3>
+        <div style="display:flex;">
+            <img id="loading" src="/static/icon/loading.svg">
+        </div>
+    </div>
+    <div class="content">
+    </div>
+    <script>
+        const sleep = delay => new Promise((resolve) => setTimeout(resolve, delay));
+        const humanFileSize = (bytes, si = false, dp = 3) => {
+            const thresh = si ? 1000 : 1024;
+
+            if (Math.abs(bytes) < thresh) {
+                return bytes + ' B';
+            };
+
+            const units = si
+                ? ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+                : ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
+            let u = -1;
+            const r = 10 ** dp;
+
+            do {
+                bytes /= thresh;
+                ++u;
+            } while (Math.round(Math.abs(bytes) * r) / r >= thresh && u < units.length - 1);
+
+
+            return bytes.toFixed(dp) + ' ' + units[u];
+        }
+        const status = (text, loading) => {
+            document.getElementById("status").innerText = text;
+            document.getElementById("loading").style.display = loading ? "inline" : "none";
+        }
+    </script>
+</body>
+
+</html>
