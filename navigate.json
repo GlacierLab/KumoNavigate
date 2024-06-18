@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240616",
+    "version": "20240618",
     "top": [
         {
             "icon": "/static/icon/group.svg",
@@ -982,7 +982,7 @@
                 },
                 {
                     "name": "Source SDK",
-                    "icon": "/static/logo/source.svg",
+                    "icon": "/static/logo/source.webp",
                     "description": "",
                     "url": "https://developer.valvesoftware.com/wiki/SDK_Installation"
                 },
