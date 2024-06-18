@@ -23,12 +23,12 @@ let ModuleCache = {};
 const ModuleLoader = {
     loadLocal: async (part, initList) => {
         Module = Object.assign(Module, part);
-        Module.autoinit.initList(initList ? initList : Object.keys(part));
+        await Module.autoinit.initList(initList ? initList : Object.keys(part));
     },
     loadRemote: async (name, initList) => {
         //加载远程模块
         await util.loadScriptAsync("module/" + name + ".js");
-        ModuleLoader.loadLocal(ModuleCache[name], initList);
+        await ModuleLoader.loadLocal(ModuleCache[name], initList);
         delete ModuleCache[name];
     }
 }
@@ -238,17 +238,17 @@ right: 0px;
         }
     },
     pwa: {
-        init: async () => {
+        init: () => {
             if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
-                await navigator.serviceWorker.register('sw.js');
+                navigator.serviceWorker.register('sw.js');
             }
         }
 
     },
     naviUpdater: {
-        init: async () => {
+        init: () => {
             if ((Module.pref.get("lastNaviUpdate") == new Date().toLocaleDateString()) && localStorage.naviCache) { } else {
-                await Module.naviUpdater.update();
+                Module.naviUpdater.update();
             };
         },
         getData: async () => {

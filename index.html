@@ -6,17 +6,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="description" content="云酱游戏导航，收录游戏玩家常用的地址，有效抵御假冒网站，是游戏玩家必备的导航站" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <link rel="icon" href="/icon.png">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" href="static/logo/kumo.webp">
+    <link rel="apple-touch-icon" href="icon.png">
     <meta name="apple-mobile-web-app-title" content="云酱游戏导航">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="canonical" href="https://kumo.qinlili.bid/" />
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <meta name="referrer" content="no-referrer" />
     <meta name="theme-color" content="#DFAEFF">
     <title>云酱游戏导航</title>
+    <script defer src="module/base.js"></script>
     <style>
         ::-webkit-scrollbar {
             height: 12px;
@@ -563,7 +564,8 @@
     <div class="top">
         <div class="title" style="height:40px;justify-content: space-between;">
             <div class="title" style="flex-shrink: 1;min-width: 40px;">
-                <img id="logo" style="width:40px;height:40px;padding:4px;" src="icon.png" alt="云酱游戏导航">
+                <img id="logo" style="width:40px;height:40px;padding:4px;" src="static/logo/kumo.webp" alt="云酱游戏导航"
+                    decoding="async">
                 <H1 id="title" style="margin:5px;line-height:30px;font-size:1.75em;font-weight: 500;"><b>云酱</b><b
                         id="fulltitle">游戏导航</b></H1>
             </div>
@@ -599,10 +601,9 @@
     </div>
     <div class="bottom">
     </div>
-    <script src="module/base.js"></script>
     <script>
         //初始化
-        (async () => {
+        document.addEventListener("DOMContentLoaded", async (event) => {
             await Module.autoinit.initEverything();
             ModuleLoader.loadLocal({
                 //桌面版同步
@@ -621,7 +622,6 @@
                         window.naviList = await Module.naviUpdater.getData();
                         Module.top.render();
                         Module.list.render();
-                        Module.naviUpdater.init();
                     },
                     updateAndRender: async () => {
                         await Module.naviUpdater.update();
@@ -697,7 +697,7 @@
                             list.className = "listItem";
                             let tipIcons = "";
                             item.desktop && self != top ? tipIcons += newTip("/static/icon/desktop.svg") : false;
-                            list.innerHTML += item.icon ? `<img class="listItemIcon" src="${item.icon}" alt="${item.name}">` : "";
+                            list.innerHTML += item.icon ? `<img class="listItemIcon" src="${item.icon}" alt="${item.name}" decoding="async">` : "";
                             list.innerHTML += `
                         <div class="listItemTextGroup">
                             <span class="listItemTitle">${item.name}${tipIcons}</span>
@@ -731,8 +731,8 @@
                     }
                 }
             });
-        })();
-        ModuleLoader.loadRemote("homeAddon")
+            ModuleLoader.loadRemote("homeAddon");
+        });
     </script>
 </body>
 
