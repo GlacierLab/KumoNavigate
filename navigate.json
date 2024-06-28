@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240618",
+    "version": "20240628",
     "top": [
         {
             "icon": "/static/icon/group.svg",
@@ -657,6 +657,12 @@
                     "icon": "/static/logo/moddb.webp",
                     "description": "",
                     "url": "https://www.moddb.com/"
+                },
+                {
+                    "name": "Thunderstore",
+                    "icon": "/static/logo/thunderstore.svg",
+                    "description": "",
+                    "url": "https://thunderstore.io/"
                 }
             ]
         },

@@ -127,11 +127,15 @@
     <div class="content">
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", async () => {
+            await Module.autoinit.initEverything();
             util.status = (text, loading) => {
                 document.getElementById("status").innerText = text;
                 document.getElementById("loading").style.display = loading ? "inline" : "none";
             }
+            ModuleLoader.loadLocal({
+
+            })
             util.status("工具箱即将上线");
         });
     </script>
