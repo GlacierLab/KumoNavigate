@@ -722,85 +722,89 @@
                             event.stopPropagation();
                             Module.magicMenu.hideMenu();
                         })
+                        //覆盖方法
+                        Module.magicMenu.locateMenu = () => {
+                            //大屏随动菜单
+                            if (document.body.clientWidth >= 700) {
+                                //右侧有空间
+                                if (document.body.clientWidth - 400 > Module.magicMenu.lastClick.x) {
+                                    menu.style.marginLeft = Module.magicMenu.lastClick.x + "px";
+                                } else {
+                                    menu.style.marginLeft = document.body.clientWidth - 400 + "px";
+                                };
+                                if (document.body.clientHeight - menu.scrollHeight > Module.magicMenu.lastClick.y) {
+                                    menu.style.marginTop = Module.magicMenu.lastClick.y + "px";
+                                } else {
+                                    if (document.body.clientHeight - menu.scrollHeight < 0) {
+                                        menu.style.marginTop = document.body.clientHeight * 0.1 + "px";
+                                    } else {
+                                        menu.style.marginTop = document.body.clientHeight - menu.scrollHeight + "px";
+                                    }
+                                }
+                            } else {
+                                menu.style.marginLeft = "10%";
+                                menu.style.marginTop = document.body.clientHeight * 0.1 + "px";
+                            }
+                        };
+                        Module.magicMenu.showMenu = async () => {
+                            if (container.style.display == "block") { return true; }
+                            container.style.display = "block";
+                            menu.style.overflowY = "hidden";
+                            menu.style.marginLeft = Module.magicMenu.lastClick.x + "px";
+                            menu.style.marginTop = Module.magicMenu.lastClick.y + "px";
+                            menu.style.transition = "transform 0.3s, margin-top 0.3s, margin-left 0.3s,max-height 0.3s";
+                            await util.sleep(5);
+                            container.style.opacity = 1;
+                            Module.magicMenu.locateMenu();
+                            menu.style.transform = "scale(1,1)";
+                            await util.sleep(295);
+                            menu.style.overflowY = "auto";
+                            menu.style.overflowY = "overlay";
+                        };
+                        Module.magicMenu.hideMenu = async () => {
+                            menu.style.transform = "scale(0.1, 0.1)";
+                            menu.style.marginLeft = Module.magicMenu.lastClickMenu.x + "px";
+                            menu.style.marginTop = Module.magicMenu.lastClickMenu.y + "px";
+                            container.style.opacity = 0;
+                            await util.sleep(300);
+                            container.style.display = "none";
+                            menuList.innerHTML = "";
+                            menu.style.transition = "max-height 0.3s";
+                        };
+                        Module.magicMenu.resizeMenu = () => {
+                            let contentHeight = menu.scrollHeight;
+                            menu.style.height = "auto";
+                            let originHeight = menu.style.maxHeight;
+                            let maxHeight = document.body.clientHeight * 0.8;
+                            if (contentHeight > maxHeight) {
+                                contentHeight = maxHeight;
+                                menu.style.marginTop = document.body.clientHeight * 0.1 + "px";
+                            }
+                            menu.style.maxHeight = (contentHeight) + "px";
+                            if (parseInt(originHeight) > contentHeight) {
+                                menu.style.height = originHeight;
+                            };
+                            Module.magicMenu.locateMenu();
+                        };
+                        Module.magicMenu.newMenu = (icon, text, click) => {
+                            const menu = document.createElement("div");
+                            menu.className = "menuItem";
+                            menu.innerHTML = `
+                <img class="menuIcon" src="${icon}" crossorigin="anonymous" loading="lazy">
+                <span class="menuText">${text}</span>
+                `;
+                            menu.onclick = click;
+                            return list.appendChild(menu);
+                        };
+                        Module.magicMenu.clearMenu = () => {
+                            list.innerHTML = "";
+                        };
                         //菜单魔法展开
                         const observer = new MutationObserver(Module.magicMenu.resizeMenu);
                         observer.observe(menu, { childList: true, subtree: true, attributes: true, attributeFilter: ['loaded'] });
                     },
                     lastClick: { x: 0, y: 0 },
-                    lastClickMenu: { x: 0, y: 0 },
-                    newMenu: (icon, text, click) => {
-                        const menu = document.createElement("div");
-                        menu.className = "menuItem";
-                        menu.innerHTML = `
-                <img class="menuIcon" src="${icon}" crossorigin="anonymous" loading="lazy">
-                <span class="menuText">${text}</span>
-                `;
-                        menu.onclick = click;
-                        return document.getElementById("menuList").appendChild(menu);
-                    },
-                    locateMenu: () => {
-                        //大屏随动菜单
-                        if (document.body.clientWidth >= 700) {
-                            //右侧有空间
-                            if (document.body.clientWidth - 400 > Module.magicMenu.lastClick.x) {
-                                document.getElementById("floatMenu").style.marginLeft = Module.magicMenu.lastClick.x + "px";
-                            } else {
-                                document.getElementById("floatMenu").style.marginLeft = document.body.clientWidth - 400 + "px";
-                            };
-                            if (document.body.clientHeight - document.getElementById("floatMenu").scrollHeight > Module.magicMenu.lastClick.y) {
-                                document.getElementById("floatMenu").style.marginTop = Module.magicMenu.lastClick.y + "px";
-                            } else {
-                                if (document.body.clientHeight - document.getElementById("floatMenu").scrollHeight < 0) {
-                                    document.getElementById("floatMenu").style.marginTop = document.body.clientHeight * 0.1 + "px";
-                                } else {
-                                    document.getElementById("floatMenu").style.marginTop = document.body.clientHeight - document.getElementById("floatMenu").scrollHeight + "px";
-                                }
-                            }
-                        } else {
-                            document.getElementById("floatMenu").style.marginLeft = "10%";
-                            document.getElementById("floatMenu").style.marginTop = document.body.clientHeight * 0.1 + "px";
-                        }
-                    },
-                    showMenu: async () => {
-                        if (document.getElementById("floatMenuContainer").style.display == "block") { return true; }
-                        document.getElementById("floatMenuContainer").style.display = "block";
-                        document.getElementById("floatMenu").style.overflowY = "hidden";
-                        document.getElementById("floatMenu").style.marginLeft = Module.magicMenu.lastClick.x + "px";
-                        document.getElementById("floatMenu").style.marginTop = Module.magicMenu.lastClick.y + "px";
-                        document.getElementById("floatMenu").style.transition = "transform 0.3s, margin-top 0.3s, margin-left 0.3s,max-height 0.3s";
-                        await util.sleep(5);
-                        document.getElementById("floatMenuContainer").style.opacity = 1;
-                        Module.magicMenu.locateMenu();
-                        document.getElementById("floatMenu").style.transform = "scale(1,1)";
-                        await util.sleep(295);
-                        document.getElementById("floatMenu").style.overflowY = "auto";
-                        document.getElementById("floatMenu").style.overflowY = "overlay";
-                    },
-                    hideMenu: async () => {
-                        document.getElementById("floatMenu").style.transform = "scale(0.1, 0.1)";
-                        document.getElementById("floatMenu").style.marginLeft = Module.magicMenu.lastClickMenu.x + "px";
-                        document.getElementById("floatMenu").style.marginTop = Module.magicMenu.lastClickMenu.y + "px";
-                        document.getElementById("floatMenuContainer").style.opacity = 0;
-                        await util.sleep(300);
-                        document.getElementById("floatMenuContainer").style.display = "none";
-                        menuList.innerHTML = "";
-                        document.getElementById("floatMenu").style.transition = "max-height 0.3s";
-                    },
-                    resizeMenu: () => {
-                        let contentHeight = document.getElementById("floatMenu").scrollHeight;
-                        document.getElementById("floatMenu").style.height = "auto";
-                        let originHeight = document.getElementById("floatMenu").style.maxHeight;
-                        let maxHeight = document.body.clientHeight * 0.8;
-                        if (contentHeight > maxHeight) {
-                            contentHeight = maxHeight;
-                            document.getElementById("floatMenu").style.marginTop = document.body.clientHeight * 0.1 + "px";
-                        }
-                        document.getElementById("floatMenu").style.maxHeight = (contentHeight) + "px";
-                        if (parseInt(originHeight) > contentHeight) {
-                            document.getElementById("floatMenu").style.height = originHeight;
-                        };
-                        Module.magicMenu.locateMenu();
-                    }
+                    lastClickMenu: { x: 0, y: 0 }
                 },
                 naviRender: {
                     init: async () => {
