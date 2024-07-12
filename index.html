@@ -263,20 +263,17 @@
             transition: all 0.2s;
         }
 
+        .sideItem[active],
         .sideItem:hover,
         .listItem:hover {
             border-radius: 4px;
-            background-color: rgba(0, 0, 0, 0.15);
-        }
-
-        .sideItem[active] {
             background-color: #dfaeff93;
         }
 
         .sideItem:active,
         .listItem:active {
             border-radius: 0px;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: #dfaeffd9;
         }
 
         .sideItemIcon {
@@ -307,14 +304,26 @@
             justify-content: space-evenly;
             flex-grow: 1;
             transition: all 0.2s;
-        }
 
-        .listItem:hover {
-            border: 1px solid #666;
-        }
+            &:hover {
+                border: 1px solid #666;
+            }
 
-        .listItem:active {
-            border: 1px solid #333;
+            &:active {
+                border: 1px solid #333;
+            }
+
+            &.richMenu {
+                border: 1px solid #dfaeff;
+
+                &:hover {
+                    border: 1px solid #d28eff;
+                }
+
+                &:active {
+                    border: 1px solid #c773fe;
+                }
+            }
         }
 
 
@@ -617,6 +626,182 @@
                         }
                     }
                 },
+                magicMenu: {
+                    init: () => {
+                        //初始化菜单叠加层
+                        util.loadCssCode(`#floatMenuContainer {
+            transition: opacity 0.2s ease-in;
+            opacity: 0;
+            display: none;
+            z-index: 9999;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            height: auto;
+            width: auto;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+
+        #floatMenu {
+            box-shadow: rgb(0 0 0 / 25%) 0px 4px 20px 1px;
+            transform: scale(0.1, 0.1);
+            transform-origin: left top;
+            overflow-y: auto;
+            overflow-y: overlay;
+            width: 80%;
+            max-height: 0px;
+            border-radius: 4px;
+            backdrop-filter: blur(5px) brightness(100%);
+            -webkit-backdrop-filter: blur(5px) brightness(100%);
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+
+        #menuList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menuItem {
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            transition: all 0.2s;
+            padding: 4px;
+        }
+
+        .menuItem:hover {
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .menuItem:active {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .menuIcon {
+            height: 32px;
+            width: 32px;
+            padding: 4px;
+        }
+
+        .menuText {
+            line-height: 24px;
+            margin: 4px;
+        }
+        @media (min-width: 700px) {
+            #floatMenu {
+                max-width: 400px;
+            }
+        }`);
+                        const container = document.createElement("div");
+                        container.id = "floatMenuContainer";
+                        const menu = document.createElement("div");
+                        menu.id = "floatMenu";
+                        const list = document.createElement("ul");
+                        list.id = "menuList";
+                        menu.appendChild(list);
+                        container.appendChild(menu);
+                        document.body.appendChild(container);
+                        window.addEventListener('pointerdown', (event) => {
+                            if (container.style.display != "block") {
+                                Module.magicMenu.lastClick.x = event.clientX;
+                                Module.magicMenu.lastClick.y = event.clientY;
+                            } else {
+                                Module.magicMenu.lastClickMenu.x = event.clientX;
+                                Module.magicMenu.lastClickMenu.y = event.clientY;
+                            }
+                        });
+                        window.addEventListener("resize", async (event) => {
+                            if (container.style.display == "block") {
+                                await util.sleep(100);
+                                Module.magicMenu.resizeMenu();
+                            };
+                        });
+                        container.addEventListener("click", (event) => {
+                            event.stopPropagation();
+                            Module.magicMenu.hideMenu();
+                        })
+                        //菜单魔法展开
+                        const observer = new MutationObserver(Module.magicMenu.resizeMenu);
+                        observer.observe(menu, { childList: true, subtree: true, attributes: true, attributeFilter: ['loaded'] });
+                    },
+                    lastClick: { x: 0, y: 0 },
+                    lastClickMenu: { x: 0, y: 0 },
+                    newMenu: (icon, text, click) => {
+                        const menu = document.createElement("div");
+                        menu.className = "menuItem";
+                        menu.innerHTML = `
+                <img class="menuIcon" src="${icon}" crossorigin="anonymous" loading="lazy">
+                <span class="menuText">${text}</span>
+                `;
+                        menu.onclick = click;
+                        return document.getElementById("menuList").appendChild(menu);
+                    },
+                    locateMenu: () => {
+                        //大屏随动菜单
+                        if (document.body.clientWidth >= 700) {
+                            //右侧有空间
+                            if (document.body.clientWidth - 400 > Module.magicMenu.lastClick.x) {
+                                document.getElementById("floatMenu").style.marginLeft = Module.magicMenu.lastClick.x + "px";
+                            } else {
+                                document.getElementById("floatMenu").style.marginLeft = document.body.clientWidth - 400 + "px";
+                            };
+                            if (document.body.clientHeight - document.getElementById("floatMenu").scrollHeight > Module.magicMenu.lastClick.y) {
+                                document.getElementById("floatMenu").style.marginTop = Module.magicMenu.lastClick.y + "px";
+                            } else {
+                                if (document.body.clientHeight - document.getElementById("floatMenu").scrollHeight < 0) {
+                                    document.getElementById("floatMenu").style.marginTop = document.body.clientHeight * 0.1 + "px";
+                                } else {
+                                    document.getElementById("floatMenu").style.marginTop = document.body.clientHeight - document.getElementById("floatMenu").scrollHeight + "px";
+                                }
+                            }
+                        } else {
+                            document.getElementById("floatMenu").style.marginLeft = "10%";
+                            document.getElementById("floatMenu").style.marginTop = document.body.clientHeight * 0.1 + "px";
+                        }
+                    },
+                    showMenu: async () => {
+                        if (document.getElementById("floatMenuContainer").style.display == "block") { return true; }
+                        document.getElementById("floatMenuContainer").style.display = "block";
+                        document.getElementById("floatMenu").style.overflowY = "hidden";
+                        document.getElementById("floatMenu").style.marginLeft = Module.magicMenu.lastClick.x + "px";
+                        document.getElementById("floatMenu").style.marginTop = Module.magicMenu.lastClick.y + "px";
+                        document.getElementById("floatMenu").style.transition = "transform 0.3s, margin-top 0.3s, margin-left 0.3s,max-height 0.3s";
+                        await util.sleep(5);
+                        document.getElementById("floatMenuContainer").style.opacity = 1;
+                        Module.magicMenu.locateMenu();
+                        document.getElementById("floatMenu").style.transform = "scale(1,1)";
+                        await util.sleep(295);
+                        document.getElementById("floatMenu").style.overflowY = "auto";
+                        document.getElementById("floatMenu").style.overflowY = "overlay";
+                    },
+                    hideMenu: async () => {
+                        document.getElementById("floatMenu").style.transform = "scale(0.1, 0.1)";
+                        document.getElementById("floatMenu").style.marginLeft = Module.magicMenu.lastClickMenu.x + "px";
+                        document.getElementById("floatMenu").style.marginTop = Module.magicMenu.lastClickMenu.y + "px";
+                        document.getElementById("floatMenuContainer").style.opacity = 0;
+                        await util.sleep(300);
+                        document.getElementById("floatMenuContainer").style.display = "none";
+                        menuList.innerHTML = "";
+                        document.getElementById("floatMenu").style.transition = "max-height 0.3s";
+                    },
+                    resizeMenu: () => {
+                        let contentHeight = document.getElementById("floatMenu").scrollHeight;
+                        document.getElementById("floatMenu").style.height = "auto";
+                        let originHeight = document.getElementById("floatMenu").style.maxHeight;
+                        let maxHeight = document.body.clientHeight * 0.8;
+                        if (contentHeight > maxHeight) {
+                            contentHeight = maxHeight;
+                            document.getElementById("floatMenu").style.marginTop = document.body.clientHeight * 0.1 + "px";
+                        }
+                        document.getElementById("floatMenu").style.maxHeight = (contentHeight) + "px";
+                        if (parseInt(originHeight) > contentHeight) {
+                            document.getElementById("floatMenu").style.height = originHeight;
+                        };
+                        Module.magicMenu.locateMenu();
+                    }
+                },
                 naviRender: {
                     init: async () => {
                         window.naviList = await Module.naviUpdater.getData();
@@ -694,7 +879,7 @@
                                 return false;
                             }
                             const list = document.createElement("a");
-                            list.className = "listItem";
+                            list.className = item.menu ? "listItem richMenu" : "listItem";
                             let tipIcons = "";
                             item.desktop && self != top ? tipIcons += newTip("/static/icon/desktop.svg") : false;
                             list.innerHTML += item.icon ? `<img class="listItemIcon" src="${item.icon}" alt="${item.name}" decoding="async">` : "";
@@ -714,6 +899,18 @@
                                 }
                                 Module.pref.addRecent(item.icon, item.name, item.url);
                             });
+                            if (item.menu) {
+                                list.addEventListener("contextmenu", event => {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                    item.menu.forEach(item => {
+                                        Module.magicMenu.newMenu(item.icon, item.name, () => {
+                                            window.open(item.url, item.url.startsWith("http") ? "_blank" : null)
+                                        })
+                                    })
+                                    Module.magicMenu.showMenu();
+                                });
+                            }
                             document.querySelector(".list").appendChild(list);
                         });
                     },

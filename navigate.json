@@ -1,9 +1,13 @@
 ﻿{
-    "version": "20240628",
+    "version": "20240712",
     "top": [
         {
             "icon": "/static/icon/group.svg",
             "info": "云酱官方群616107007欢迎加入"
+        },
+        {
+            "icon": "/static/icon/menu.svg",
+            "info": "试试右键/长按紫色边框的项目有惊喜"
         }
     ],
     "list": [
@@ -23,7 +27,24 @@
                     "name": "Steam",
                     "icon": "/static/logo/steam.webp",
                     "description": "最大的国际游戏平台",
-                    "url": "https://store.steampowered.com/"
+                    "url": "https://store.steampowered.com/",
+                    "menu": [
+                        {
+                            "name": "激活CDKEY",
+                            "icon": "/static/icon/key.svg",
+                            "url": "https://store.steampowered.com/account/registerkey"
+                        },
+                        {
+                            "name": "下载云存档",
+                            "icon": "/static/icon/save.svg",
+                            "url": "https://store.steampowered.com/account/remotestorage"
+                        },
+                        {
+                            "name": "打开Steam控制台",
+                            "icon": "/static/icon/dev.svg",
+                            "url": "steam://open/console"
+                        }
+                    ]
                 },
                 {
                     "name": "蒸汽平台",
