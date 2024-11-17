@@ -89,10 +89,10 @@
                     "url": "https://www.gog.com/"
                 },
                 {
-                    "name": "战网国服（预约）",
+                    "name": "战网国服",
                     "icon": "/static/logo/battle.svg",
                     "description": "牢雪打赢复活赛了",
-                    "url": "https://wow.blizzard.cn/"
+                    "url": "https://shop.battlenet.com.cn/zh-cn"
                 },
                 {
                     "name": "Battle.net",
@@ -256,6 +256,18 @@
                     "icon": "/static/logo/mihoyo/honkai3.webp",
                     "description": "也可从Steam/Epic获取",
                     "url": "https://honkaiimpact3.hoyoverse.com/"
+                },
+                {
+                    "name": "绝区零|国服",
+                    "icon": "/static/logo/mihoyo/zzz.webp",
+                    "description": "",
+                    "url": "https://zzz.mihoyo.com/"
+                },
+                {
+                    "name": "绝区零|外服",
+                    "icon": "/static/logo/mihoyo/zzz.webp",
+                    "description": "也可从Epic获取",
+                    "url": "https://zenless.hoyoverse.com/"
                 },
                 {
                     "name": "Riot Games 拳头游戏",
@@ -642,6 +654,12 @@
                     "url": "https://slimerancher.fandom.com/wiki/Slime_Rancher_Wiki"
                 },
                 {
+                    "name": "Forager Wiki",
+                    "icon": "/static/logo/forager.webp",
+                    "description": "",
+                    "url": "https://forager.fandom.com/wiki/Forager_Wiki"
+                },
+                {
                     "name": "游戏评测与资讯",
                     "divider": true
                 },
@@ -873,6 +891,12 @@
                     "icon": "/static/logo/heroic.webp",
                     "description": "Epic+Amazon+GOG整合替代|GPL-3.0",
                     "url": "https://heroicgameslauncher.com/"
+                },
+                {
+                    "name": "Collapse Launcher",
+                    "icon": "/static/logo/collapse.webp",
+                    "description": "Hoyoverse游戏管理|MIT",
+                    "url": "https://github.com/CollapseLauncher/Collapse"
                 },
                 {
                     "name": "硬件监控",
