@@ -1,0 +1,33 @@
+<div id="settings" style="height:auto;overflow-y:scroll;">
+    <img alt="云酱游戏导航" src="static/logo/kumo.avif"
+        style="margin-top:10vh;width:25vw;max-width:160px;border-radius: 20px ;">
+    <H2>云酱游戏导航</H2>
+    <H4 id="update" style="padding:10px;"></H4>
+    <script>
+        (async () => {
+            let currentVersion = await (await fetch("getVersionWorker")).text();
+            let navVersion = JSON.parse(localStorage.naviCache).version;
+            document.getElementById("update").innerText = "版本：" + currentVersion + "\n导航数据：" + navVersion;
+        })()
+    </script>
+    <H5>开发：<a href="https://qinlili.bid" target="_blank">Glacier Lab - 琴梨梨</a></H5>
+    <br>
+    <button onclick="window.open('https://github.com/GlacierLab/KumoNavigate/', '_blank');">
+        查看源码</button>
+    <br>
+    <button onclick="window.open('https://github.com/GlacierLab/KumoNavigate/issues/new', '_blank');">
+        反馈</button>
+    <br>
+    <H6>云酱图标来自<a href="https://www.flaticon.com/free-icons/video-game" title="video game icons">Freepik -
+            Flaticon</a></H6>
+    <H6>显卡图标来自<a href="https://www.flaticon.com/free-icons/gpu" title="gpu icons">Linector - Flaticon</a></H6>
+    <H6>其余图标来自<a href="https://fonts.google.com/icons">Material Icons</a></H6>
+    <br>
+    <H6>右键/长按左上角图标即可强制更新导航数据！</H6>
+    <br>
+    <H6>你的网络信息会由Cloudflare匿名收集以帮助改善用户体验</H6>
+    <br>
+    <p><a href="https://icp.gov.moe/?keyword=20225033" target="_blank">萌ICP备20225033号</a></p>
+    <br>
+    <br>
+</div>

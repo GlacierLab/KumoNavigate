@@ -535,6 +535,26 @@
                 }
             }
         }
+
+        button {
+            font-size: 1.3em;
+            padding: 3px;
+            border: 1px solid #999 !important;
+            background-color: white;
+            border-radius: 4px !important;
+            transition: background-color 0.25s ease-in-out;
+            margin: 3px;
+            min-width: 60%;
+
+            &:hover {
+                background-color: #ccc;
+            }
+
+            &:active {
+                background-color: #999;
+            }
+        }
+    </style>
     </style>
 
     <style id="webstyle">
@@ -587,7 +607,7 @@
                     <img src="/static/icon/desktop.svg" alt="桌面版">
                     <span>桌面版</span>
                 </div>
-                <div class="titleBtn" onclick="Module.yuni.showFrame('/about.html')">
+                <div class="titleBtn" onclick="Module.yuni.showNative('about')">
                     <img src="/static/icon/info.svg" alt="关于">
                     <span>关于</span>
                 </div>

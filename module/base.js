@@ -25,6 +25,22 @@ const util = {
         style.appendChild(document.createTextNode(code))
         var head = document.getElementsByTagName('head')[0]
         head.appendChild(style)
+    },
+    setInnerHTML: (elm, html) => {
+        elm.innerHTML = html;
+        Array.from(elm.querySelectorAll("script"))
+            .forEach(oldScriptEl => {
+                const newScriptEl = document.createElement("script");
+
+                Array.from(oldScriptEl.attributes).forEach(attr => {
+                    newScriptEl.setAttribute(attr.name, attr.value)
+                });
+
+                const scriptText = document.createTextNode(oldScriptEl.innerHTML);
+                newScriptEl.appendChild(scriptText);
+
+                oldScriptEl.parentNode.replaceChild(newScriptEl, oldScriptEl);
+            });
     }
 }
 let ModuleCache = {};
