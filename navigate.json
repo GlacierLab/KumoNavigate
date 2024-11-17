@@ -1,5 +1,5 @@
 ﻿{
-    "version": "20240712",
+    "version": "20241117",
     "top": [
         {
             "icon": "/static/icon/group.svg",
@@ -702,28 +702,16 @@
                     "url": "https://rpcs3.net/"
                 },
                 {
+                    "name": "shadPS4",
+                    "icon": "/static/logo/shadps4.webp",
+                    "description": "PS4|GPL-2.0",
+                    "url": "https://shadps4.net/"
+                },
+                {
                     "name": "Vita3K",
                     "icon": "/static/logo/vita3k.svg",
                     "description": "PSV|GPL-2.0",
                     "url": "https://vita3k.org/"
-                },
-                {
-                    "name": "yuzu",
-                    "icon": "/static/logo/yuzu.svg",
-                    "description": "NS|GPL-3.0",
-                    "url": "https://yuzu-emu.org/"
-                },
-                {
-                    "name": "Ryujinx",
-                    "icon": "/static/logo/ryujinx.webp",
-                    "description": "NS|MIT",
-                    "url": "https://ryujinx.org/"
-                },
-                {
-                    "name": "Citra",
-                    "icon": "/static/logo/citra.svg",
-                    "description": "3DS|GPL-2.0",
-                    "url": "https://citra-emu.org/"
                 },
                 {
                     "name": "RetroArch",
@@ -736,6 +724,11 @@
                     "icon": "/static/logo/teknoparrot.webp",
                     "description": "街机|GPL-3.0",
                     "url": "https://teknogods.github.io/index.html"
+                },
+                {
+                    "name": "Azahar Emulator",
+                    "description": "3DS|GPL-3.0|Citra的后继项目",
+                    "url": "https://azahar-emu.org/"
                 },
                 {
                     "name": "Dolphin",
@@ -956,6 +949,12 @@
                     "name": "Melon Loader",
                     "description": "Unity游戏通用Mod加载器",
                     "url": "https://github.com/LavaGang/MelonLoader"
+                },
+                {
+                    "name": "BepInEx",
+                    "icon": "/static/logo/bepinex.webp",
+                    "description": "Unity/FNA游戏通用Mod加载器",
+                    "url": "https://github.com/BepInEx/BepInEx"
                 }
             ]
         },
@@ -975,7 +974,14 @@
                     "name": "Unity3D",
                     "icon": "/static/logo/unity.svg",
                     "description": "中国大陆IP会下到广告特供版",
-                    "url": "https://unity.com/"
+                    "url": "https://unity.com/",
+                    "menu": [
+                        {
+                            "name": "历史版本下载",
+                            "icon": "/static/icon/history.svg",
+                            "url": "https://unity.com/releases/editor/archive"
+                        }
+                    ]
                 },
                 {
                     "name": "Unreal Engine",
@@ -1080,6 +1086,11 @@
                 {
                     "name": "支撑程序运行的基础库",
                     "intro": true
+                },
+                {
+                    "name": "PunkBuster反作弊",
+                    "description": "手动更新可解决旧战地被踢出问题",
+                    "url": "https://www.evenbalance.com/downloads.php"
                 },
                 {
                     "name": "Visual C++ 运行时",
