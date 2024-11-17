@@ -755,6 +755,12 @@
                     "url": "https://dolphin-emu.org/"
                 },
                 {
+                    "name": "Cemu",
+                    "icon": "/static/logo/cemu.webp",
+                    "description": "Wii U|GPL-2.0",
+                    "url": "https://cemu.info/"
+                },
+                {
                     "name": "DeSmuME",
                     "icon": "/static/logo/desmume.webp",
                     "description": "NDS|GPL-2.0",
